@@ -1,0 +1,9 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-eunuch'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+
+call plug#end()

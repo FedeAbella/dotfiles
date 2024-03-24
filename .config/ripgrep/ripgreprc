@@ -1,0 +1,11 @@
+# This is a configuration file containing global flags for ripgrep
+--max-columns=150
+--max-columns-preview
+
+# Add types
+--type-add
+apex:*.{cls,trigger}
+--type-add
+lwc:*.{html,js}
+--type-add
+aura:*.{cmp,component}
