@@ -110,7 +110,7 @@ return {
             desc = "Salesforce: Set Target Org",
         },
         {
-            keys = { "n", "<leader>st" },
+            keys = { "n", "<leader>stt" },
             cmd = [[<cmd>lua require'sf'.toggle_term()<cr>]],
             desc = "Salesforce: Toggle Terminal",
         },

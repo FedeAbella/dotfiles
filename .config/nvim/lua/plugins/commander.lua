@@ -42,7 +42,7 @@ return {
             -- Find stuff
             {
                 keys = { "n", "<leader>ff" },
-                cmd = [[<cmd> Telescope find_files follow=true<cr>]],
+                cmd = [[<cmd> Telescope find_files follow=true hidden=true no_ignore=true<cr>]],
                 desc = "Telescope: Find files",
             },
             { keys = { "n", "<leader>ft" }, cmd = builtin.live_grep, desc = "Telescope: Find text" },

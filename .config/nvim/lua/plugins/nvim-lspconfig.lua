@@ -36,7 +36,7 @@ return {
                 "sqlls",
                 "taplo",
                 "visualforce_ls",
-                "lemminx",
+                --"lemminx",
                 "hydra_lsp",
                 "lwc_ls",
             },
@@ -48,6 +48,15 @@ return {
                         -- This is done in sets.lua
                         filetypes = { "apex" },
                     })
+                    --   require('lspconfig').lemminx.setup({
+                    --       settings = {
+                    --           xml = {
+                    --               format = {
+                    --                   enabled = false,
+                    --               }
+                    --           }
+                    --       }
+                    --   })
                 end,
             },
         })

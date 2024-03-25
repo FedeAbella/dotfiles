@@ -22,6 +22,7 @@ return {
                     "--smart-case",
                     "--trim",
                     "-L",
+                    "-."
                 },
             },
             extensions = {
