@@ -77,6 +77,26 @@ return {
         vim.api.nvim_create_user_command("SfOpenTestSelect", function()
             require("sf").open_test_select()
         end, {})
+
+        vim.api.nvim_create_user_command("SfRetrievePackage", function()
+            require("sf").retrieve_package()
+        end, {})
+
+        vim.api.nvim_create_user_command("SfRunAnonymousApex", function()
+            require("sf").run_anonymous()
+        end, {})
+
+        vim.api.nvim_create_user_command("SfRunQuery", function()
+            require("sf").run_query()
+        end, {})
+
+        vim.api.nvim_create_user_command("SfRunToolingQuery", function()
+            require("sf").run_tooling_query()
+        end, {})
+
+        vim.api.nvim_create_user_command("SfRunLocalTests", function()
+            require("sf").run_local_tests()
+        end, {})
     end,
     commander = {
         {
@@ -90,14 +110,14 @@ return {
             desc = "Salesforce: Set Target Org",
         },
         {
-            keys = { "n", "<leader>sfd" },
-            cmd = [[<cmd>lua require'sf'.diff_in_target_org()<cr>]],
-            desc = "Salesforce: Set Target Org",
-        },
-        {
             keys = { "n", "<leader>st" },
             cmd = [[<cmd>lua require'sf'.toggle_term()<cr>]],
             desc = "Salesforce: Toggle Terminal",
+        },
+        {
+            keys = { "n", "<leader>sfd" },
+            cmd = [[<cmd>lua require'sf'.diff_in_target_org()<cr>]],
+            desc = "Salesforce: Diff file against org",
         },
         {
             keys = { "n", "<leader>sfp" },
@@ -110,14 +130,29 @@ return {
             desc = "Salesforce: Retrieve file",
         },
         {
+            keys = { "n", "<leader>sfq" },
+            cmd = [[<cmd>lua require'sf'.run_query()<cr>]],
+            desc = "Salesforce: Run Query in File",
+        },
+        {
+            keys = { "n", "<leader>sftq" },
+            cmd = [[<cmd>lua require'sf'.run_tooling_query()<cr>]],
+            desc = "Salesforce: Run Tooling Query in File",
+        },
+        {
+            keys = { "n", "<leader>sfa" },
+            cmd = [[<cmd>lua require'sf'.run_anonymous()<cr>]],
+            desc = "Salesforce: Run file as Anononymous Apex",
+        },
+        {
+            keys = { "n", "<leader>spr" },
+            cmd = [[<cmd>lua require'sf'.retrieve_package()<cr>]],
+            desc = "Salesforce: Retrieve package",
+        },
+        {
             keys = { "n", "<leader>smr" },
             cmd = [[<cmd>lua require'sf'.list_md_to_retrieve()<cr>]],
             desc = "Salesforce: Retrieve Metadata",
-        },
-        {
-            keys = { "n", "<leader>smtr" },
-            cmd = [[<cmd>lua require'sf'.save_and_push()<cr>]],
-            desc = "Salesforce: Retrieve Metadata Type",
         },
         {
             keys = { "n", "<leader>stm" },
@@ -135,9 +170,9 @@ return {
             desc = "Salesforce: Repeat last test run",
         },
         {
-            keys = { "n", "<leader>sfp" },
-            cmd = [[<cmd>lua require'sf'.save_and_push()<cr>]],
-            desc = "Salesforce: Save and push",
+            keys = { "n", "<leader>sta" },
+            cmd = [[<cmd>lua require'sf'.run_local_tests()<cr>]],
+            desc = "Salesforce: Run all Local Tests",
         },
     },
 }
