@@ -1,0 +1,87 @@
+-- --local Sf = require("sf")
+-- local U = require("sf.util")
+-- local t = require("sf.term.raw_term"):new()
+--
+-- local base_md_dir = "/force-app/main/default"
+--
+-- local SfExtend = {}
+--
+-- function SfExtend.retrieve_package()
+--     local cmd = vim.fn.expandcmd("sf project retrieve start -x %:p -o ") .. U.get()
+--     t:run(cmd)
+-- end
+--
+-- function SfExtend.run_anonymous()
+--     local cmd = vim.fn.expandcmd("sf apex run -f %:p -o ") .. U.get()
+--     t:run(cmd)
+-- end
+--
+-- function SfExtend.run_local_tests()
+--     local cmd = vim.fn.expandcmd("sf apex run test -l RunLocalTests -c -w 180 -o ") .. U.get()
+--     t:run(cmd)
+-- end
+--
+-- function SfExtend.run_query()
+--     local cmd = vim.fn.expandcmd("sf data query -w 180 -f %:p -o ") .. U.get()
+--     t:run(cmd)
+-- end
+--
+-- function SfExtend.run_tooling_query()
+--     local cmd = vim.fn.expandcmd("sf data query -t -w 180 -f %:p -o ") .. U.get()
+--     t:run(cmd)
+-- end
+--
+-- function SfExtend.generate_class()
+--     vim.ui.input({
+--         prompt = "Enter Class name: ",
+--     }, function(input)
+--         if input ~= nil then
+--             local root = U.get_sf_root()
+--             U.silent_job_call(
+--                 "sf apex generate class -d " .. root .. base_md_dir .. "/classes -n " .. input,
+--                 nil,
+--                 "Something went wrong creating the class",
+--                 function()
+--                     vim.notify("Class " .. input .. " created", vim.log.levels.INFO)
+--                 end
+--             )
+--         end
+--     end)
+-- end
+--
+-- function SfExtend.generate_aura()
+--     vim.ui.input({
+--         prompt = "Enter Aura Bundle name: ",
+--     }, function(input)
+--         if input ~= nil then
+--             local root = U.get_sf_root()
+--             U.silent_job_call(
+--                 "sf lightning generate component --type aura -d " .. root .. base_md_dir .. "/aura -n " .. input,
+--                 nil,
+--                 "Something went wrong creating the component",
+--                 function()
+--                     vim.notify("Aura Bundle " .. input .. " created", vim.log.levels.INFO)
+--                 end
+--             )
+--         end
+--     end)
+-- end
+--
+-- function SfExtend.generate_lwc()
+--     vim.ui.input({
+--         prompt = "Enter LWC Bundle name: ",
+--     }, function(input)
+--         if input ~= nil then
+--             local root = U.get_sf_root()
+--             U.silent_job_call(
+--                 "sf lightning generate component --type lwc -d " .. root .. base_md_dir .. "/lwc -n " .. input,
+--                 nil,
+--                 "Something went wrong creating the component",
+--                 function()
+--                     vim.notify("LWC Bundle " .. input .. " created", vim.log.levels.INFO)
+--                 end
+--             )
+--         end
+--     end)
+-- end
+-- return SfExtend
