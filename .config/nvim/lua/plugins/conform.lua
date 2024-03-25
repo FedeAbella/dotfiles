@@ -15,7 +15,7 @@ return {
       format_on_save = { timeout_ms = 1500, lsp_fallback = true },
       formatters = {
         stylua = {
-          prepend_args = { "--indent-width", "2", "--indent-type", "Spaces" },
+          prepend_args = { "--indent-width", "4", "--indent-type", "Spaces" },
         },
       },
     })

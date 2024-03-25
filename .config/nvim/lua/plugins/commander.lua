@@ -40,7 +40,11 @@ return {
 
         commander.add({
             -- Find stuff
-            { keys = { "n", "<leader>ff" }, cmd = builtin.find_files, desc = "Telescope: Find files" },
+            {
+                keys = { "n", "<leader>ff" },
+                cmd = [[<cmd> Telescope find_files follow=true<cr>]],
+                desc = "Telescope: Find files",
+            },
             { keys = { "n", "<leader>ft" }, cmd = builtin.live_grep, desc = "Telescope: Find text" },
             { keys = { "n", "<leader>fg" }, cmd = builtin.git_files, desc = "Telescope: Find git files" },
             { keys = { "n", "<leader>fh" }, cmd = builtin.help_tags, desc = "Telescope: Find in help" },

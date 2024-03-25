@@ -21,6 +21,7 @@ return {
                     "--column",
                     "--smart-case",
                     "--trim",
+                    "-L",
                 },
             },
             extensions = {
