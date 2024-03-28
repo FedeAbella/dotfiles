@@ -25,7 +25,7 @@ return {
                 null_ls.builtins.code_actions.gitsigns,   -- Actions for git hunks
                 -- Diagnostics
                 null_ls.builtins.diagnostics.actionlint,  -- Github actions linter
-                null_ls.builtins.diagnostics.commitlint,  -- Git commit linter
+                null_ls.builtins.diagnostics.gitlint,     -- Git commit linter
                 null_ls.builtins.diagnostics.trail_space, -- Trailing whitespace for all filetypes
                 null_ls.builtins.diagnostics.pmd.with({
                     -- This requires having set up filetypes for apex and assigning file extensions
