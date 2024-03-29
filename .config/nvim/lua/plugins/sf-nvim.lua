@@ -97,6 +97,18 @@ return {
         vim.api.nvim_create_user_command("SfRunLocalTests", function()
             require("sf").run_local_tests()
         end, {})
+
+        vim.api.nvim_create_user_command("SfCreateApexClass", function()
+            require("sf").create_apex_class()
+        end, {})
+
+        vim.api.nvim_create_user_command("SfCreateAuraBundle", function()
+            require("sf").create_aura_bundle()
+        end, {})
+
+        vim.api.nvim_create_user_command("SfCreateLwcBundle", function()
+            require("sf").create_lwc_bundle()
+        end, {})
     end,
     commander = {
         {
@@ -153,6 +165,21 @@ return {
             keys = { "n", "<leader>smr" },
             cmd = [[<cmd>lua require'sf'.list_md_to_retrieve()<cr>]],
             desc = "Salesforce: Retrieve Metadata",
+        },
+        {
+            keys = { "n", "<leader>sgc" },
+            cmd = [[<cmd>lua require'sf'.create_apex_class()<cr>]],
+            desc = "Salesforce: Create Apex Class",
+        },
+        {
+            keys = { "n", "<leader>sga" },
+            cmd = [[<cmd>lua require'sf'.create_aura_bundle()<cr>]],
+            desc = "Salesforce: Create Aura Bundle",
+        },
+        {
+            keys = { "n", "<leader>sgl" },
+            cmd = [[<cmd>lua require'sf'.create_lwc_bundle()<cr>]],
+            desc = "Salesforce: Create LWC Bundle",
         },
         {
             keys = { "n", "<leader>stm" },
