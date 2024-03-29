@@ -11,7 +11,6 @@ return {
                 end
             end,
         })
-        --vim.keymap.set('n', '<leader>t', '<cmd>ToggleTerm direction=float<cr>', { desc = { 'Open Floating Terminal' } })
     end,
     commander = {
         {

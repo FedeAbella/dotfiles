@@ -6,9 +6,6 @@ return {
         "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
         "MunifTanjim/nui.nvim",
     },
-    --    config = function()
-    --        vim.keymap.set('n', '<C-n>', [[<cmd>Neotree toggle<cr>]], { desc = { 'Open Neotree' } })
-    --    end
     commander = {
         {
             keys = { "n", "<C-n>" },

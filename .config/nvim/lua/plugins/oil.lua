@@ -164,9 +164,6 @@ return {
                 border = "rounded",
             },
         })
-        --        vim.keymap.set("n", "<leader>eb", "")
-        --        vim.keymap.set("n", "<leader>er", [[<cmd>Oil --float .<cr>]], { desc = { "Open Oil on editor root" } })
-        --        vim.keymap.set("n", "<leader>eh", [[<cmd>Oil --float<cr>]], { desc = { "Open Oil on this file's directory" } })
     end,
     commander = {
         {

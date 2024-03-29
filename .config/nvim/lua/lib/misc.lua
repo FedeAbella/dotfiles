@@ -1,11 +1,13 @@
 function DumpTable(o)
-    if type(o) == 'table' then
-        local s = '{ '
+    if type(o) == "table" then
+        local s = "{ "
         for k, v in pairs(o) do
-            if type(k) ~= 'number' then k = '"' .. k .. '"' end
-            s = s .. '[' .. k .. '] = ' .. DumpTable(v) .. ','
+            if type(k) ~= "number" then
+                k = '"' .. k .. '"'
+            end
+            s = s .. "[" .. k .. "] = " .. DumpTable(v) .. ","
         end
-        return s .. '} '
+        return s .. "} "
     else
         return tostring(o)
     end

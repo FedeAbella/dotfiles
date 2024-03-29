@@ -1,4 +1,4 @@
 -- Unix like commands for file manipulation
 return {
-    'tpope/vim-eunuch'
+    "tpope/vim-eunuch",
 }

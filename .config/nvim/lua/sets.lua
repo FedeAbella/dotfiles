@@ -1,6 +1,6 @@
 -- Whitespace chars
 vim.opt.listchars =
-  { eol = "↲", tab = "▸-", space = "·", nbsp = "␣", trail = "+", extends = "→", precedes = "←" } -- Whitespace characters
+    { eol = "↲", tab = "▸-", space = "·", nbsp = "␣", trail = "+", extends = "→", precedes = "←" } -- Whitespace characters
 
 -- Line numbering
 vim.opt.number = true -- Show line numbers
@@ -26,15 +26,15 @@ vim.filetype = on
 vim.filetype.plugin = on
 
 vim.filetype.add({
-  extension = {
-    cls = "apex",
-    apex = "apex",
-    trigger = "apex",
-    soql = "soql",
-    sosl = "sosl",
-    zsh = "sh",
-  },
-  filename = {
-    [".zshrc"] = "sh",
-  },
+    extension = {
+        cls = "apex",
+        apex = "apex",
+        trigger = "apex",
+        soql = "soql",
+        sosl = "sosl",
+        zsh = "sh",
+    },
+    filename = {
+        [".zshrc"] = "sh",
+    },
 })

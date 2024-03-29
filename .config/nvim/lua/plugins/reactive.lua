@@ -1,12 +1,12 @@
 -- Makes the cursor and cursorline change depending on mode
 return {
-    'rasulomaroff/reactive.nvim',
+    "rasulomaroff/reactive.nvim",
     config = function()
-        require('reactive').setup {
+        require("reactive").setup({
             load = {
-                'catppuccin-frappe-cursor',
-                'catppuccin-frappe-cursorline'
+                "catppuccin-frappe-cursor",
+                "catppuccin-frappe-cursorline",
             },
-        }
-    end
+        })
+    end,
 }
