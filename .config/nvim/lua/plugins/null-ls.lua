@@ -22,10 +22,10 @@ return {
             end,
             sources = {
                 -- Code Actions
-                null_ls.builtins.code_actions.gitsigns,   -- Actions for git hunks
+                null_ls.builtins.code_actions.gitsigns, -- Actions for git hunks
                 -- Diagnostics
-                null_ls.builtins.diagnostics.actionlint,  -- Github actions linter
-                null_ls.builtins.diagnostics.gitlint,     -- Git commit linter
+                null_ls.builtins.diagnostics.actionlint, -- Github actions linter
+                null_ls.builtins.diagnostics.gitlint, -- Git commit linter
                 null_ls.builtins.diagnostics.trail_space, -- Trailing whitespace for all filetypes
                 null_ls.builtins.diagnostics.pmd.with({
                     -- This requires having set up filetypes for apex and assigning file extensions
@@ -59,9 +59,9 @@ return {
                     end,
                 }),
                 -- Formatting
-                null_ls.builtins.formatting.stylua.with({
-                    extra_args = { "--indent-width", "4", "--indent-type", "Spaces" },
-                }),
+                --                null_ls.builtins.formatting.stylua.with({
+                --                    extra_args = { "--respect-ignores" },
+                --                }),
                 null_ls.builtins.formatting.prettier.with({
                     extra_filetypes = { "apex" },
                 }),
