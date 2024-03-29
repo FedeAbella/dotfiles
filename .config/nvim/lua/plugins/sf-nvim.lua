@@ -11,6 +11,8 @@ return {
 
     config = function()
         require("sf").setup({
+            -- Disable hotkey automatic creation since I want to create my own.
+            -- Unfortunately, this disables commands too, and must be recreated.
             hotkeys_in_filetypes = {},
         }) -- important to call setup() to init the plugin!
 
@@ -109,6 +111,24 @@ return {
         vim.api.nvim_create_user_command("SfCreateLwcBundle", function()
             require("sf").create_lwc_bundle()
         end, {})
+
+        -- These are additional Salesforce related commands that don't use
+        -- sf.nvim, but make sense to have them created here.
+        vim.api.nvim_create_user_command(
+            "SfJestRunAll",
+            [[TermExec direction=float cmd="npm run test:unit:coverage"]],
+            {}
+        )
+
+        vim.api.nvim_create_user_command("SfJestRunFile", function()
+            if vim.fn.expand("%"):match("(.*)%.test%.js$") == nil then
+                vim.notify("Not in a jest test file", vim.log.levels.ERROR)
+                return
+            end
+            require("toggleterm").exec_command(
+                string.format([[direction=float cmd="npm run test:unit -- -- %s"]], vim.fn.expand("%"))
+            )
+        end, {})
     end,
     commander = {
         {
@@ -200,6 +220,16 @@ return {
             keys = { "n", "<leader>sta" },
             cmd = [[<cmd>lua require'sf'.run_local_tests()<cr>]],
             desc = "Salesforce: Run all Local Tests",
+        },
+        {
+            keys = { "n", "<leader>sja" },
+            cmd = [[<cmd>SfJestRunAll<cr>]],
+            desc = "Salesforce: Run all Jest Tests",
+        },
+        {
+            keys = { "n", "<leader>sjf" },
+            cmd = [[<cmd>SfJestRunFile<cr>]],
+            desc = "Salesforce: Run Jest Tests in current file",
         },
     },
 }
