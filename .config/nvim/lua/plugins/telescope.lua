@@ -15,14 +15,32 @@ return {
                 vimgrep_arguments = {
                     "rg",
                     "--color=never",
-                    "--no-heading",
-                    "--with-filename",
-                    "--line-number",
                     "--column",
+                    "--follow",
+                    "--glob",
+                    "!**/.git/*",
+                    "--hidden",
+                    "--ignore-file",
+                    ".rgignore",
+                    "--line-number",
+                    "--no-heading",
                     "--smart-case",
                     "--trim",
-                    "-L",
-                    "-.",
+                    "--with-filename",
+                },
+            },
+            pickers = {
+                find_files = {
+                    find_command = {
+                        "rg",
+                        "--files",
+                        "--follow",
+                        "--glob",
+                        "!**/.git/*",
+                        "--hidden",
+                        "--ignore-file",
+                        ".rgignore",
+                    },
                 },
             },
             extensions = {
@@ -31,15 +49,13 @@ return {
                 },
             },
         })
-
-        telescope.load_extension("fzf")
         telescope.load_extension("ui-select")
     end,
     commander = {
         -- Find stuff
         {
             keys = { "n", "<leader>ff" },
-            cmd = [[<cmd> Telescope find_files follow=true hidden=true no_ignore=true<cr>]],
+            cmd = [[<cmd> Telescope find_files<cr>]],
             desc = "Telescope: Find files",
         },
         { keys = { "n", "<leader>ft" }, cmd = [[<cmd>Telescope live_grep<cr>]], desc = "Telescope: Find text" },
