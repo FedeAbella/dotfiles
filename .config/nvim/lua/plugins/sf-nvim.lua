@@ -14,6 +14,12 @@ return {
             -- Disable hotkey automatic creation since I want to create my own.
             -- Unfortunately, this disables commands too, and must be recreated.
             hotkeys_in_filetypes = {},
+            types_to_retrieve = {
+                "ApexClass",
+                "ApexTrigger",
+                "StaticResource",
+                "LightningComponentBundle",
+            },
         }) -- important to call setup() to init the plugin!
 
         vim.api.nvim_create_user_command("SfFetchOrgList", function()
