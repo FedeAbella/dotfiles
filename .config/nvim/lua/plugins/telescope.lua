@@ -43,6 +43,7 @@ return {
                         "--hidden",
                         "--ignore-file",
                         ".rgignore",
+                        "--no-ignore-vcs"
                     },
                 },
             },
@@ -63,7 +64,7 @@ return {
         },
         { keys = { "n", "<leader>ft" }, cmd = [[<cmd>Telescope live_grep<cr>]], desc = "Telescope: Find text" },
         { keys = { "n", "<leader>fg" }, cmd = [[<cmd>Telescope git_files<cr>]], desc = "Telescope: Find git files" },
-        { keys = { "n", "<leader>fh" }, cmd = [[<cmd>Telescope help_tags]], desc = "Telescope: Find in help" },
+        { keys = { "n", "<leader>fh" }, cmd = [[<cmd>Telescope help_tags]],     desc = "Telescope: Find in help" },
         -- Diagnostics
         {
             keys = { "n", "<leader>da" },
