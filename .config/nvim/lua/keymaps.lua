@@ -3,9 +3,10 @@ vim.g.mapleader = " "
 return {
     -- Buffers
     { keys = { "n", "<A-c>" }, cmd = vim.cmd.bdelete, desc = "Buffers: Close current" },
-    { keys = { "n", "<C-k>" }, cmd = vim.cmd.bnext, desc = "Buffers: Next" },
-    { keys = { "n", "<C-j>" }, cmd = vim.cmd.bprevious, desc = "Buffers: Previous" },
+    { keys = { "n", "<C-h>" }, cmd = vim.cmd.bnext, desc = "Buffers: Next" },
+    { keys = { "n", "<C-l>" }, cmd = vim.cmd.bprevious, desc = "Buffers: Previous" },
     { keys = { "n", "<A-C>" }, cmd = [[<cmd>%bd|e#|bd#<cr>|'"]], desc = "Buffers: Close others" },
+    { keys = { "n", "<leader>'" }, cmd = [[<C-^>]], desc = "Buffers: Last" },
 
     -- Terminal
     { keys = { "t", "<esc>" }, cmd = [[<C-\><C-n>]], desc = "Terminal: Quit", show = false },
@@ -25,6 +26,11 @@ return {
     { keys = { "n", "<c-u>" }, cmd = "<c-u>zz", desc = "Move view up, but center view after", show = false },
     { keys = { "n", "N" }, cmd = "Nzz", desc = "Previous match, but center view after", show = false },
     { keys = { "n", "n" }, cmd = "nzz", desc = "Next match, but center view after", show = false },
+    { keys = { "n", "%" }, cmd = "%zz", desc = "Go to matching parenthesis, but center view after", show = false },
+    { keys = { "n", "#" }, cmd = "#zz", desc = "Previous ocurrence, but center view after", show = false },
+    { keys = { "n", "*" }, cmd = "*zz", desc = "Next ocurrence, but center view after", show = false },
+    { keys = { "n", "{" }, cmd = "{zz", desc = "Previous paragraph, but center view after", show = false },
+    { keys = { "n", "}" }, cmd = "}zz", desc = "Next paragraph, but center view after", show = false },
 
     -- Editing
     { keys = { "v", "J" }, cmd = ":m '>+1<cr>gv=gv", desc = "Move selection up" },

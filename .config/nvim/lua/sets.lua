@@ -20,6 +20,7 @@ vim.opt.showmode = false -- Don't show mode in line at bottom
 vim.opt.splitright = true -- Split to the right when using vsplit
 vim.opt.splitbelow = true -- Split to the bottom when using split
 vim.opt.timeout = false -- Don't timeout when waiting for keystrokes
+vim.opt.scrolloff = 8 -- Always keep at least 8 lines before and after cursor
 
 -- Filetypes
 vim.filetype = on

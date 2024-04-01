@@ -46,6 +46,8 @@ return {
                 { name = "buffer" },
             }),
             mapping = cmp.mapping.preset.insert({
+                ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+                ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
                 ["<C-Space>"] = cmp.mapping.complete(),
                 ["<C-u>"] = cmp.mapping.scroll_docs(-4),
                 ["<C-d>"] = cmp.mapping.scroll_docs(4),
