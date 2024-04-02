@@ -37,7 +37,7 @@ return {
                 "taplo",
                 "visualforce_ls",
                 "lemminx",
-                "hydra_lsp",
+                "yamlls",
                 "lwc_ls",
             },
             handlers = {

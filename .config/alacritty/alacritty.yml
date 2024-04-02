@@ -11,7 +11,7 @@ env:
 window:
   padding:
     x: 5
-  decorations: "Full"
+  decorations: "full"
   startup_mode: "Maximized"
 
 font:
