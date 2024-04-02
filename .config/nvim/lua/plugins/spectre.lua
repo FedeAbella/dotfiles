@@ -36,11 +36,4 @@ return {
             },
         })
     end,
-    commander = {
-        {
-            keys = { "n", "<C-x>" },
-            cmd = [[<cmd>lua require'spectre'.toggle()<cr>]],
-            desc = "Spectre: Toggle",
-        },
-    },
 }
