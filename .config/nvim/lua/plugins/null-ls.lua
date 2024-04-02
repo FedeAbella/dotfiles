@@ -70,7 +70,8 @@ return {
                 null_ls.builtins.formatting.shfmt.with({
                     extra_args = {
                         "--indent",
-                        4
+                        4,
+                        "--case-indent"
                     }
                 }),
             },
