@@ -2,7 +2,7 @@ return {
     "nvimtools/none-ls.nvim",
     config = function()
         -- Sets a default apex ruleset path if the project doesn't have one
-        local default_apex_ruleset = vim.env.HOME .. "/.local/bin/pmd-bin-7.0.0/rulesets/apex.xml"
+        local default_apex_ruleset = vim.env.HOME .. "/.config/pmd/rulesets/apex.xml"
         local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
         local null_ls = require("null-ls")
         null_ls.setup({
@@ -22,10 +22,10 @@ return {
             end,
             sources = {
                 -- Code Actions
-                null_ls.builtins.code_actions.gitsigns,   -- Actions for git hunks
+                null_ls.builtins.code_actions.gitsigns, -- Actions for git hunks
                 -- Diagnostics
-                null_ls.builtins.diagnostics.actionlint,  -- Github actions linter
-                null_ls.builtins.diagnostics.gitlint,     -- Git commit linter
+                null_ls.builtins.diagnostics.actionlint, -- Github actions linter
+                null_ls.builtins.diagnostics.gitlint, -- Git commit linter
                 null_ls.builtins.diagnostics.trail_space, -- Trailing whitespace for all filetypes
                 null_ls.builtins.diagnostics.pmd.with({
                     -- This requires having set up filetypes for apex and assigning file extensions
@@ -35,7 +35,7 @@ return {
                     -- while adding extra args in the same function
                     args = function(params)
                         -- Try using a local ruleset in .pmd/rulesets/apex.xml, or default one
-                        local project_apex_ruleset = params.cwd .. "/.pmd/rulesets/apex.xml"
+                        local project_apex_ruleset = params.cwd .. "/pmd/rulesets/apex.xml"
                         local ruleset
                         if vim.fn.filereadable(project_apex_ruleset) == 1 then
                             ruleset = project_apex_ruleset
@@ -54,9 +54,6 @@ return {
                             "--no-progress",
                         }
                     end,
-                    env = function(params)
-                        return { PMD_APEX_ROOT_DIRECTORY = params.cwd }
-                    end,
                 }),
                 -- Formatting
                 --                null_ls.builtins.formatting.stylua.with({
@@ -71,8 +68,8 @@ return {
                     extra_args = {
                         "--indent",
                         4,
-                        "--case-indent"
-                    }
+                        "--case-indent",
+                    },
                 }),
             },
         })
