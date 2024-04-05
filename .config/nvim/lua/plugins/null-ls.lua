@@ -22,11 +22,13 @@ return {
             end,
             sources = {
                 -- Code Actions
-                null_ls.builtins.code_actions.gitsigns, -- Actions for git hunks
+                null_ls.builtins.code_actions.gitsigns,  -- Actions for git hunks
+                null_ls.builtins.code_actions.proselint, -- Actions for English writing
                 -- Diagnostics
                 null_ls.builtins.diagnostics.actionlint, -- Github actions linter
-                null_ls.builtins.diagnostics.gitlint, -- Git commit linter
-                null_ls.builtins.diagnostics.trail_space, -- Trailing whitespace for all filetypes
+                null_ls.builtins.diagnostics.gitlint,    -- Git commit linter
+                null_ls.builtins.diagnostics.markdownlint,
+                null_ls.builtins.diagnostics.proselint,  -- Actions for English writing
                 null_ls.builtins.diagnostics.pmd.with({
                     -- This requires having set up filetypes for apex and assigning file extensions
                     -- This is done in sets.lua
@@ -55,6 +57,8 @@ return {
                         }
                     end,
                 }),
+                null_ls.builtins.diagnostics.trail_space, -- Trailing whitespace for all filetypes
+                null_ls.builtins.diagnostics.write_good,
                 -- Formatting
                 --                null_ls.builtins.formatting.stylua.with({
                 --                    extra_args = { "--respect-ignores" },
@@ -71,6 +75,8 @@ return {
                         "--case-indent",
                     },
                 }),
+                -- Hovers
+                null_ls.builtins.hover.dictionary,
             },
         })
     end,
