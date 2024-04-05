@@ -11,13 +11,13 @@ return {
     end,
     commander = {
         {
-            keys = { { "i", "s" }, "<C-J>", { silent = true } },
+            keys = { { "i", "s" }, "<C-j>", { silent = true } },
             cmd = [[<cmd>lua require'luasnip'.jump(1)<cr>]],
             desc = "LuaSnip: Next Suggestion",
             show = false,
         },
         {
-            keys = { { "i", "s" }, "<C-K>", { silent = true } },
+            keys = { { "i", "s" }, "<C-k>", { silent = true } },
             cmd = [[<cmd>lua require'luasnip'.jump(-1)<cr>]],
             desc = "LuaSnip: Previous Suggestion",
             show = false,
@@ -29,7 +29,7 @@ return {
                     require("luasnip").change_choice(1)
                 end
             end,
-            desc = "LuaSnip: Next Suggestion",
+            desc = "LuaSnip: Next Choice",
             show = false,
         },
     },
