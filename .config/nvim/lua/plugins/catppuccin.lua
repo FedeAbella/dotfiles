@@ -6,16 +6,14 @@ return {
         lazy = false,
         config = function()
             require("catppuccin").setup({
-                transparent_background = true,
                 dim_inactive = {
                     enabled = true,
                     percentage = 0.01,
                 },
                 integrations = {
-                    gitsigns = true,
                     neotree = true,
-                    ufo = true,
                     notify = true,
+                    harpoon = true,
                 },
             })
             vim.cmd.colorscheme("catppuccin-mocha")
