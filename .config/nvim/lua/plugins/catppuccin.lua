@@ -15,6 +15,7 @@ return {
                     notify = true,
                     harpoon = true,
                 },
+                transparent_background = true,
             })
             vim.cmd.colorscheme("catppuccin-mocha")
             vim.api.nvim_set_hl(0, "Whitespace", { fg = "#6c7086" })

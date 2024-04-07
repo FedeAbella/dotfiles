@@ -11,10 +11,10 @@ return {
     -- This replaces the default false config
     config = function()
         require("lsp-zero").set_sign_icons({
-            error = "",
-            warn = "",
-            hint = "",
-            infor = "",
+            error = "✘",
+            warn = "▲",
+            hint = "⚑",
+            info = "»",
         })
     end,
 }
