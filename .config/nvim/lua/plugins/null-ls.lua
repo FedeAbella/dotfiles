@@ -6,6 +6,7 @@ return {
         local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
         local null_ls = require("null-ls")
         null_ls.setup({
+            default_timeout = 10000,
             on_attach = function(client, bufnr)
                 if client.supports_method("textDocument/formatting") then
                     vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
@@ -56,6 +57,7 @@ return {
                             "--no-progress",
                         }
                     end,
+                    timeout = 10000
                 }),
                 null_ls.builtins.diagnostics.trail_space, -- Trailing whitespace for all filetypes
                 null_ls.builtins.diagnostics.write_good,
