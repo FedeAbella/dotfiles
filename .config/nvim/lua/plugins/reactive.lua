@@ -4,8 +4,8 @@ return {
     config = function()
         require("reactive").setup({
             load = {
-                "catppuccin-frappe-cursor",
-                "catppuccin-frappe-cursorline",
+                "catppuccin-mocha-cursor",
+                "catppuccin-mocha-cursorline",
             },
         })
     end,

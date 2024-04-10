@@ -3,10 +3,6 @@ return {
     config = function()
         require("gitsigns").setup({
             numhl = true,
-            current_line_blame = true,
-            current_line_blame_opts = {
-                delay = 500,
-            },
             _signs_staged_enable = true,
         })
         vim.api.nvim_set_hl(0, "GitSignsCurrentLineBlame", { fg = "#7f849c" })
@@ -37,11 +33,6 @@ return {
                 return "<Ignore>"
             end,
             desc = "Git: Next hunk",
-        },
-        {
-            keys = { "n", "<leader>ghs" },
-            cmd = [[<cmd>lua require'gitsigns'.stage_hunk()<cr>]],
-            desc = "Git: Stage hunk",
         },
         {
             keys = { "n", "<leader>ghs" },

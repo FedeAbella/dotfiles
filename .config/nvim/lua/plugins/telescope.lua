@@ -7,7 +7,11 @@ return {
         local actions = require("telescope.actions")
         telescope.setup({
             defaults = {
-                --sorting_strategy = "ascending",
+                layout_config = {
+                    vertical = { width = 0.80 },
+                    mirror = true,
+                },
+                layout_strategy = "vertical",
                 mappings = {
                     i = {
                         ["<C-h>"] = "which_key",
@@ -43,7 +47,7 @@ return {
                         "--hidden",
                         "--ignore-file",
                         ".rgignore",
-                        "--no-ignore-vcs"
+                        "--no-ignore-vcs",
                     },
                 },
             },
@@ -64,7 +68,7 @@ return {
         },
         { keys = { "n", "<leader>ft" }, cmd = [[<cmd>Telescope live_grep<cr>]], desc = "Telescope: Find text" },
         { keys = { "n", "<leader>fg" }, cmd = [[<cmd>Telescope git_files<cr>]], desc = "Telescope: Find git files" },
-        { keys = { "n", "<leader>fh" }, cmd = [[<cmd>Telescope help_tags]],     desc = "Telescope: Find in help" },
+        { keys = { "n", "<leader>fh" }, cmd = [[<cmd>Telescope help_tags]], desc = "Telescope: Find in help" },
         -- Diagnostics
         {
             keys = { "n", "<leader>da" },
