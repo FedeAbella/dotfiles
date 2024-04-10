@@ -9,7 +9,8 @@ return {
             require("catppuccin").setup({
                 dim_inactive = {
                     enabled = true,
-                    percentage = 0.01,
+                    percentage = 0,
+                    shade = "dark"
                 },
                 integrations = {
                     neotree = true,
