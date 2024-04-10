@@ -7,8 +7,8 @@ return {
         require("lualine").setup({
             options = {
                 theme = "catppuccin",
-                section_separators = "",
-                component_separators = { left = "|", right = "|" },
+                component_separators = " ",
+                section_separators = { left = "", right = "" },
             },
             sections = {
                 lualine_a = { "mode" },
@@ -34,10 +34,7 @@ return {
                 lualine_y = {},
                 lualine_z = {},
             },
-            tabline = {},
-            winbar = {},
-            inactive_winbar = {},
-            extensions = {},
         })
     end,
+    enabled = true
 }
