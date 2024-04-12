@@ -120,11 +120,7 @@ return {
 
         -- These are additional Salesforce related commands that don't use
         -- sf.nvim, but make sense to have them created here.
-        vim.api.nvim_create_user_command(
-            "SfJestRunAll",
-            [[TermExec direction=float cmd="npm run test:unit:coverage"]],
-            {}
-        )
+        vim.api.nvim_create_user_command("SfJestRunAll", [[8TermExec name=Jest cmd="npm run test:unit:coverage"]], {})
 
         vim.api.nvim_create_user_command("SfJestRunFile", function()
             if vim.fn.expand("%"):match("(.*)%.test%.js$") == nil then
@@ -132,7 +128,8 @@ return {
                 return
             end
             require("toggleterm").exec_command(
-                string.format([[direction=float cmd="npm run test:unit -- -- %s"]], vim.fn.expand("%"))
+                string.format([[name=Jest cmd="npm run test:unit -- -- %s"]], vim.fn.expand("%")),
+                8
             )
         end, {})
     end,
