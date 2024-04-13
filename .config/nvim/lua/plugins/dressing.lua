@@ -1,3 +1,4 @@
+-- Customize the vim.ui interface to use floats
 return {
     "stevearc/dressing.nvim",
     opts = {},

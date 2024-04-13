@@ -3,6 +3,8 @@ return {
     dependencies = {
         "nvim-lua/plenary.nvim",
     },
+    lazy = true,
+    cmd = "Spectre",
     config = function()
         require("spectre").setup({
             find_engine = {

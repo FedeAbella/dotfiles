@@ -168,12 +168,12 @@ return {
     commander = {
         {
             keys = { "n", "<leader>-" },
-            cmd = [[<cmd>Oil --float .<cr>]],
+            cmd = [[<cmd>Oil .<cr>]],
             desc = "Oil: Open root",
         },
         {
             keys = { "n", "<leader>_" },
-            cmd = [[<cmd>Oil --float<cr>]],
+            cmd = [[<cmd>Oil<cr>]],
             desc = "Oil: Open here",
         },
     },

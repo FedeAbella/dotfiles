@@ -1,6 +1,7 @@
 return {
     "NeogitOrg/neogit",
     lazy = true,
+    cmd = "Neogit",
     dependencies = {
         "nvim-lua/plenary.nvim", -- required
         "sindrets/diffview.nvim", -- optional - Diff integration
@@ -14,7 +15,7 @@ return {
     commander = {
         {
             keys = { "n", "<leader>gg" },
-            cmd = [[<cmd>lua require'neogit'.open()<cr>]],
+            cmd = [[<cmd>Neogit<cr>]],
             desc = "Neogit: Open",
         },
     },

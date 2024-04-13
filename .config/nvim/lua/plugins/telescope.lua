@@ -10,7 +10,7 @@ return {
                 layout_config = {
                     vertical = { width = 0.80 },
                     mirror = true,
-                    prompt_position = "top"
+                    prompt_position = "top",
                 },
                 layout_strategy = "vertical",
                 mappings = {
@@ -69,7 +69,7 @@ return {
         },
         { keys = { "n", "<leader>ft" }, cmd = [[<cmd>Telescope live_grep<cr>]], desc = "Telescope: Find text" },
         { keys = { "n", "<leader>fg" }, cmd = [[<cmd>Telescope git_files<cr>]], desc = "Telescope: Find git files" },
-        { keys = { "n", "<leader>fh" }, cmd = [[<cmd>Telescope help_tags]],     desc = "Telescope: Find in help" },
+        { keys = { "n", "<leader>fh" }, cmd = [[<cmd>Telescope help_tags]], desc = "Telescope: Find in help" },
         -- Diagnostics
         {
             keys = { "n", "<leader>da" },
