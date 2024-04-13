@@ -10,6 +10,8 @@ return {
             },
             sett = {
                 show_modified = true,
+                bkg = colors.base,
+                extras = colors.subtext0,
             },
         })
 
@@ -41,12 +43,12 @@ return {
                 str = " 󰢎 ",
                 hl = {
                     fg = "#009ddc",
-                    bg = "NONE",
+                    bg = colors.base,
                 },
             },
             hl = {
-                fg = colors.overlay1,
-                bg = "NONE",
+                fg = colors.subtext0,
+                bg = colors.base,
             },
         }
         require("feline").setup({

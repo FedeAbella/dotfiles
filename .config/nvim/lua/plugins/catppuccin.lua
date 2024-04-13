@@ -9,15 +9,12 @@ return {
             require("catppuccin").setup({
                 dim_inactive = {
                     enabled = true,
-                    percentage = 0,
-                    shade = "dark"
                 },
                 integrations = {
                     neotree = true,
                     notify = true,
                     mason = true,
                 },
-                transparent_background = true,
                 custom_highlights = function(colors)
                     return {
                         LineNr = { fg = colors.overlay1 },
@@ -32,12 +29,17 @@ return {
                         NotifyINFOBorder = { fg = colors.mauve },
                         NotifyINFOIcon = { fg = colors.mauve },
                         NotifyINFOTitle = { fg = colors.mauve, style = { "italic" } },
+                        Whitespace = { fg = colors.overlay1 },
+                        FloatBorder = { fg = colors.mauve },
+                        GitSignsCurrentLineBlame = { fg = colors.overlay1 },
+                        DiagnosticVirtualTextError = { bg = colors.none },
+                        DiagnosticVirtualTextWarn = { bg = colors.none },
+                        DiagnosticVirtualTextInfo = { bg = colors.none },
+                        DiagnosticVirtualTextHint = { bg = colors.none },
                     }
                 end,
             })
             vim.cmd.colorscheme("catppuccin-mocha")
-            vim.api.nvim_set_hl(0, "Whitespace", { fg = mocha.overlay1 })
-            vim.api.nvim_set_hl(0, "FloatBorder", { fg = mocha.mauve })
             vim.api.nvim_set_hl(0, "OilDir", { fg = mocha.mauve })
             vim.api.nvim_set_hl(0, "OilLink", { fg = mocha.peach })
             vim.api.nvim_set_hl(0, "OilLinkTarget", { fg = mocha.rosewater })

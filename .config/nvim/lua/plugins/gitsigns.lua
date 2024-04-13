@@ -5,7 +5,6 @@ return {
             numhl = true,
             _signs_staged_enable = true,
         })
-        vim.api.nvim_set_hl(0, "GitSignsCurrentLineBlame", { fg = "#7f849c" })
     end,
     commander = {
         {
