@@ -2,19 +2,19 @@ vim.g.mapleader = " "
 
 return {
     -- Buffers
-    { keys = { "n", "<A-c>" }, cmd = vim.cmd.bdelete, desc = "Buffers: Close current" },
-    { keys = { "n", "<C-h>" }, cmd = vim.cmd.bnext, desc = "Buffers: Next" },
-    { keys = { "n", "<C-l>" }, cmd = vim.cmd.bprevious, desc = "Buffers: Previous" },
-    { keys = { "n", "<A-C>" }, cmd = [[<cmd>%bd|e#|bd#<cr>|'"]], desc = "Buffers: Close others" },
-    { keys = { "n", "<leader>'" }, cmd = [[<C-^>]], desc = "Buffers: Last" },
+    { keys = { "n", "<A-c>" },      cmd = vim.cmd.bdelete,            desc = "Buffers: Close current" },
+    { keys = { "n", "<C-h>" },      cmd = vim.cmd.bnext,              desc = "Buffers: Next" },
+    { keys = { "n", "<C-l>" },      cmd = vim.cmd.bprevious,          desc = "Buffers: Previous" },
+    { keys = { "n", "<A-C>" },      cmd = [[<cmd>%bd|e#|bd#<cr>|'"]], desc = "Buffers: Close others" },
+    { keys = { "n", "<leader>'" },  cmd = [[<C-^>]],                  desc = "Buffers: Last" },
 
     -- Terminal
-    { keys = { "t", "<esc>" }, cmd = [[<C-\><C-n>]], desc = "Terminal: Quit", show = false },
+    { keys = { "t", "<esc>" },      cmd = [[<C-\><C-n>]],             desc = "Terminal: Quit",        show = false },
 
     -- Format
-    { keys = { "n", "<leader>\\" }, cmd = "50%ggVG=2<C-o>", desc = "Reindent file" },
+    { keys = { "n", "<leader>\\" }, cmd = "50%ggVG=2<C-o>",           desc = "Reindent file" },
     {
-        keys = { "n", "<leader>w" },
+        keys = { "n", "<leader>W" },
         cmd = function()
             vim.o.list = not vim.o.list
         end,
@@ -84,13 +84,13 @@ return {
     },
 
     -- Editing
-    { keys = { "n", "<leader>w" }, cmd = ":w<cr>", desc = "Write file" },
-    { keys = { "v", "J" }, cmd = ":m '>+1<cr>gv=gv", desc = "Move selection up" },
-    { keys = { "v", "K" }, cmd = ":m '<-2<cr>gv=gv", desc = "Move selection down" },
-    { keys = { "x", "<leader>p" }, cmd = '"_dP', desc = "Paste, but don't replace register" },
-    { keys = { "n", "<leader>y" }, cmd = '"+y', desc = "Yank into clipboard" },
-    { keys = { "v", "<leader>y" }, cmd = '"+y', desc = "Yank into clipboard" },
-    { keys = { "n", "<leader>Y" }, cmd = '"+Y', desc = "Yank lines into clipboard" },
+    { keys = { "n", "<leader>w" }, cmd = ":w<cr>",           desc = "Write file" },
+    { keys = { "v", "J" },         cmd = ":m '>+1<cr>gv=gv", desc = "Move selection up" },
+    { keys = { "v", "K" },         cmd = ":m '<-2<cr>gv=gv", desc = "Move selection down" },
+    { keys = { "x", "<leader>p" }, cmd = '"_dP',             desc = "Paste, but don't replace register" },
+    { keys = { "n", "<leader>y" }, cmd = '"+y',              desc = "Yank into clipboard" },
+    { keys = { "v", "<leader>y" }, cmd = '"+y',              desc = "Yank into clipboard" },
+    { keys = { "n", "<leader>Y" }, cmd = '"+Y',              desc = "Yank lines into clipboard" },
     {
         keys = {
             "n",
@@ -101,7 +101,7 @@ return {
     },
 
     -- Diagnostics
-    { keys = { "n", "<leader>dn" }, cmd = [[<cmd>lua vim.diagnostic.goto_next()<cr>]], desc = "Diagnostics: Next" },
+    { keys = { "n", "<leader>dn" }, cmd = [[<cmd>lua vim.diagnostic.goto_next()<cr>]],  desc = "Diagnostics: Next" },
     {
         keys = {
             "n",
