@@ -107,6 +107,8 @@ export NVM_DIR="$HOME/.nvm"
 # User configuration
 [[ ! -f $HOME/.local/config/.zshconfig.zsh ]] || source $HOME/.local/config/.zshconfig.zsh
 
+[[ ! $(command -v zoxide ) ]] || eval "$(zoxide init zsh)"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
 
