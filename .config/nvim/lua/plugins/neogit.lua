@@ -3,13 +3,13 @@ return {
     lazy = true,
     cmd = "Neogit",
     dependencies = {
-        "nvim-lua/plenary.nvim", -- required
-        "sindrets/diffview.nvim", -- optional - Diff integration
+        "nvim-lua/plenary.nvim",         -- required
+        "sindrets/diffview.nvim",        -- optional - Diff integration
         "nvim-telescope/telescope.nvim", -- optional
     },
     config = function()
         require("neogit").setup({
-            kind = "split_above",
+            kind = "replace",
         })
     end,
     commander = {
