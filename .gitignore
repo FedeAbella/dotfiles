@@ -1,0 +1,2 @@
+.config/vim/undo-dir/*
+!.config/vim/undo-dir/.gitkeep
