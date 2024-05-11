@@ -3,7 +3,7 @@ return {
     name = "sf.nvim",
     branch = "dev",
     dev = true,
-    lazy = true,
+    lazy = false,
     dependencies = {
         "nvim-treesitter/nvim-treesitter",
         "nvim-telescope/telescope.nvim",
