@@ -60,7 +60,7 @@ if [ -d $HOME/.local/bin/nvim-linux64 ]; then
 fi
 
 #Go
-if [-d /usr/local/go ]; then
+if [ -d /usr/local/go ]; then
     PATH=$PATH:/usr/local/go/bin
 fi
 
