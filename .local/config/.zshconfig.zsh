@@ -23,7 +23,7 @@ alias lla='ls -al'
 alias bat='batcat'
 
 # Misc aliases
-[[ ! -f $HOME/.local/scripts/imwheelrc/mousewheel.sh ]] || alias mousewheel='~/.local/scripts/imwheelrc/mousewheel.sh' # edit mouse wheel speed
+[[ -z $(command -v fzf) ]] || alias whatalias='eval $(alias | fzf | cut -d "=" -f 1)'
 
 # Script aliases
 alias git-branches='bash ~/.local/scripts/git-branches.sh'
