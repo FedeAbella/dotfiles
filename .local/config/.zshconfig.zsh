@@ -59,6 +59,11 @@ if [ -d $HOME/.local/bin/nvim-linux64 ]; then
     PATH=$PATH:$HOME/.local/bin/nvim-linux64/bin
 fi
 
+#Go
+if [-d /usr/local/go ]; then
+    PATH=$PATH:/usr/local/go/bin
+fi
+
 ## Export environment vars
 export EDITOR=$(whence nvim)
 export SFDX_DISABLE_DNS_CHECK=true
