@@ -6,14 +6,12 @@ return {
     lazy = false,
     dependencies = {
         "nvim-treesitter/nvim-treesitter",
-        "nvim-telescope/telescope.nvim",
+        "ibhagwan/fzf-lua"
     },
 
     config = function()
         require("sf").setup({
-            -- Disable hotkey automatic creation since I want to create my own.
-            -- Unfortunately, this disables commands too, and must be recreated.
-            hotkeys_in_filetypes = {},
+            enable_hotkeys = false,
             types_to_retrieve = {
                 "ApexClass",
                 "ApexTrigger",
@@ -43,106 +41,9 @@ return {
             },
         }) -- important to call setup() to init the plugin!
 
-        vim.api.nvim_create_user_command("SfFetchOrgList", function()
-            require("sf").fetch_org_list()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfSetTargetOrg", function()
-            require("sf").set_target_org()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfDiff", function()
-            require("sf").diff_in_target_org()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfDiffInOrg", function()
-            require("sf").diff_in_org()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfListMdToRetrieve", function()
-            require("sf").list_md_to_retrieve()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfPullAndListMd", function()
-            require("sf").pull_and_list_md()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfListMdTypeToRetrieve", function()
-            require("sf").list_md_type_to_retrieve()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfPullAndListMdType", function()
-            require("sf").pull_and_list_md_type()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfToggle", function()
-            require("sf").toggle_term()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfSaveAndPush", function()
-            require("sf").save_and_push()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfRetrieve", function()
-            require("sf").retrieve()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfCancelCommand", function()
-            require("sf").cancel()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfRunAllTestsInThisFile", function()
-            require("sf").run_all_tests_in_this_file()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfRunCurrentTest", function()
-            require("sf").run_current_test()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfRepeatTest", function()
-            require("sf").repeat_last_tests()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfOpenTestSelect", function()
-            require("sf").open_test_select()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfRetrievePackage", function()
-            require("sf").retrieve_package()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfRunAnonymousApex", function()
-            require("sf").run_anonymous()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfRunQuery", function()
-            require("sf").run_query()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfRunToolingQuery", function()
-            require("sf").run_tooling_query()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfRunLocalTests", function()
-            require("sf").run_local_tests()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfCreateApexClass", function()
-            require("sf").create_apex_class()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfCreateAuraBundle", function()
-            require("sf").create_aura_bundle()
-        end, {})
-
-        vim.api.nvim_create_user_command("SfCreateLwcBundle", function()
-            require("sf").create_lwc_bundle()
-        end, {})
-
         -- These are additional Salesforce related commands that don't use
         -- sf.nvim, but make sense to have them created here.
         vim.api.nvim_create_user_command("SfJestRunAll", [[8TermExec name=Jest cmd="npm run test:unit:coverage"]], {})
-
         vim.api.nvim_create_user_command("SfJestRunFile", function()
             if vim.fn.expand("%"):match("(.*)%.test%.js$") == nil then
                 vim.notify("Not in a jest test file", vim.log.levels.ERROR)
