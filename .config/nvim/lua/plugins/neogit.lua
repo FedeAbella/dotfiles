@@ -9,7 +9,7 @@ return {
     },
     config = function()
         require("neogit").setup({
-            kind = "split_above",
+            kind = "split",
         })
     end,
     commander = {
