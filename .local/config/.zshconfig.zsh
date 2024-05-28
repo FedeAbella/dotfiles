@@ -66,6 +66,14 @@ if [ -d /usr/local/go ]; then
     PATH=$PATH:$GOPATH/bin
 fi
 
+#Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PATH:$PYENV_ROOT/bin"
+command -v pyenv >/dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)"
+
+# Generated for envman. Do not edit. (Webi)
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
 ## Export environment vars
 export EDITOR=$(whence nvim)
 export SFDX_DISABLE_DNS_CHECK=true
