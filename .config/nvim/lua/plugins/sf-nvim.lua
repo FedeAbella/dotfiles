@@ -35,6 +35,7 @@ return {
                 "PermissionSet",
                 "Profile",
                 "QuickAction",
+                "RecordType",
                 "Role",
                 "Settings",
                 "StaticResource",
