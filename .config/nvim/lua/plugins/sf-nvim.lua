@@ -1,12 +1,12 @@
 return {
-    "FedeAbella/sf.nvim",
+    "xixiaofinland/sf.nvim",
     name = "sf.nvim",
     branch = "dev",
     dev = true,
     lazy = false,
     dependencies = {
         "nvim-treesitter/nvim-treesitter",
-        "ibhagwan/fzf-lua"
+        "ibhagwan/fzf-lua",
     },
 
     config = function()
