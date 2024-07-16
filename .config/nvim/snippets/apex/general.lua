@@ -52,7 +52,7 @@ return {
         desc = "Apex Test Method",
         docstring = "Template for Apex Test method",
     }, {
-        t("@IsTest"),
+        t("@isTest"),
         t({ "", "static void " }),
         i(1, "Method name"),
         t("() {"),
@@ -65,7 +65,7 @@ return {
         desc = "Apex Test Class",
         docstring = "Template for Apex Test class",
     }, {
-        t("@IsTest"),
+        t("@isTest"),
         t({ "", "private class " }),
         i(1, "Class name"),
         t(" {"),
@@ -78,7 +78,7 @@ return {
         desc = "Apex Test Setup",
         docstring = "Template for Apex Test setup method",
     }, {
-        t("@TestSetup"),
+        t("@testSetup"),
         t({ "", "static void setup() {" }),
         t({ "", "    " }),
         i(0),
