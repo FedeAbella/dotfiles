@@ -1,14 +1,14 @@
 #Run tmux
-run_tmux=
-if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
-    run_tmux="true"
-fi
-if [ ! -z "${run_tmux}" ] && [ "${TERM_PROGRAM}" = "vscode" ]; then
-    current_dir=$(basename $(pwd))
-    tmux new-session -A -s "vscode(${current_dir})" >/dev/null 
-elif [ ! -z "${run_tmux}" ]; then
-    tmux new-session -A -s ${USER} >/dev/null
-fi
+# run_tmux=
+# if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
+#     run_tmux="true"
+# fi
+# if [ ! -z "${run_tmux}" ] && [ "${TERM_PROGRAM}" = "vscode" ]; then
+#     current_dir=$(basename $(pwd))
+#     tmux new-session -A -s "vscode(${current_dir})" >/dev/null 
+# elif [ ! -z "${run_tmux}" ]; then
+#     tmux new-session -A -s ${USER} >/dev/null
+# fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
