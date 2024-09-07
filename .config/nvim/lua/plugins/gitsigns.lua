@@ -3,7 +3,7 @@ return {
     config = function()
         require("gitsigns").setup({
             numhl = true,
-            _signs_staged_enable = true,
+            signs_staged_enable = true,
         })
     end,
     commander = {
