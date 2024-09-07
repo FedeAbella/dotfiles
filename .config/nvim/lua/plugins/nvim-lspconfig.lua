@@ -26,7 +26,7 @@ return {
                 "bashls",
                 "cssls",
                 "eslint",
-                "tsserver",
+                -- "ts_ls",
                 "graphql",
                 "html",
                 "jsonls",
