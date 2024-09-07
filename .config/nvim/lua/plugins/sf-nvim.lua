@@ -1,7 +1,7 @@
 return {
     "xixiaofinland/sf.nvim",
     name = "sf.nvim",
-    branch = "dev",
+    branch = "feature/fix-createlwc",
     dev = true,
     lazy = false,
     dependencies = {
@@ -44,6 +44,14 @@ return {
                 "SharingOwnerRule",
                 "StaticResource",
             },
+            term_config = {
+                dimensions = {
+                    height = 0.6,
+                    width = 0.9,
+                    y = 0.5,
+                },
+            },
+            plugin_folder_name = "/.sf/sf_cache/",
         }) -- important to call setup() to init the plugin!
 
         -- These are additional Salesforce related commands that don't use
