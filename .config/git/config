@@ -1,20 +1,43 @@
 [user]
-	email = 65520926+FedeAbella@users.noreply.github.com
-	name = Federico Abella
+    email = 65520926+FedeAbella@users.noreply.github.com
+    name = Federico Abella
+
 [core]
-	autocrlf = input
+    autocrlf = input
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
 [credential "https://dev.azure.com"]
-	useHttpPath = true
+    useHttpPath = true
+
 [init]
-	defaultBranch = main
+    defaultBranch = main
+
 [credential "https://github.com"]
-	helper = !/usr/bin/gh auth git-credential
+    helper = !/usr/bin/gh auth git-credential
+
 [credential "https://gist.github.com"]
-	helper = !/usr/bin/gh auth git-credential
+    helper = !/usr/bin/gh auth git-credential
+
 [rebase]
-	autoStash = true
-	autosquash = true
+    autoStash = true
+    autosquash = true
+
 [alias]
-	lg = log --pretty='%C(red)%h%C(auto)%d%Creset %s %C(yellow)by %an %C(cyan)(%ar)%Creset'
+    lg = log --pretty='%C(red)%h%C(auto)%d%Creset %s %C(yellow)by %an %C(cyan)(%ar)%Creset'
+
 [pull]
-	rebase = true
+    rebase = true
+
+[delta]
+    navigate = true
+    dark = true
+    line-numbers = true
