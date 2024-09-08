@@ -1,8 +1,8 @@
 return {
     "xixiaofinland/sf.nvim",
     name = "sf.nvim",
-    branch = "feature/fix-createlwc",
-    dev = true,
+    branch = "main",
+    dev = false,
     lazy = false,
     dependencies = {
         "nvim-treesitter/nvim-treesitter",
