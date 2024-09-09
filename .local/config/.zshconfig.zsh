@@ -23,7 +23,10 @@ alias lla='ls -al'
 alias bat='batcat'
 
 # Misc aliases
-[[ -z $(command -v fzf) ]] || alias whatalias='print -z -- $(alias | fzf | cut -d "=" -f 1)'
+if [[ -n $(command -v fzf) ]]; then
+    alias whatalias='print -z -- $(alias | fzf | cut -d "=" -f 1)'
+    alias fzfb='fzf --preview="batcat --color=always --style=numbers --line-range=:500 {}"'
+fi
 
 # Script aliases
 alias git-branches='bash ~/.local/scripts/git-branches.sh'
