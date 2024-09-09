@@ -23,7 +23,7 @@ alias lla='ls -al'
 alias bat='batcat'
 
 # Misc aliases
-[[ -z $(command -v fzf) ]] || alias whatalias='eval $(alias | fzf | cut -d "=" -f 1)'
+[[ -z $(command -v fzf) ]] || alias whatalias='print -z -- $(alias | fzf | cut -d "=" -f 1)'
 
 # Script aliases
 alias git-branches='bash ~/.local/scripts/git-branches.sh'
