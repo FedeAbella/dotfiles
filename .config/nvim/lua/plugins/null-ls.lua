@@ -66,6 +66,7 @@ return {
                 --                    extra_args = { "--respect-ignores" },
                 --                }),
                 null_ls.builtins.formatting.prettier.with({
+                    timeout = 10000,
                     extra_filetypes = { "apex" },
                 }),
                 null_ls.builtins.formatting.black,
