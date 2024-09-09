@@ -14,10 +14,10 @@ alias rm='nocorrect rm -i'
 alias mkdir='nocorrect mkdir -pv'
 
 ## lsd aliases
-alias ls='lsd'
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='ls -al'
+alias ls='lsd -1'
+alias ll='lsd -l'
+alias la='lsd -a'
+alias lla='lsd -al'
 
 ## batcat alias
 alias bat='batcat'
