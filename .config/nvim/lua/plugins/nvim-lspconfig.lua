@@ -26,7 +26,7 @@ return {
                 "bashls",
                 "cssls",
                 "eslint",
-                -- "ts_ls",
+                "ts_ls",
                 "graphql",
                 "html",
                 "jsonls",
@@ -57,8 +57,8 @@ return {
                         end,
                     })
                 end,
-                tsserver = function()
-                    require("lspconfig").tsserver.setup({
+                ts_ls = function()
+                    require("lspconfig").ts_ls.setup({
                         on_init = function(client)
                             client.server_capabilities.documentFormattingProvider = false
                             client.server_capabilities.documentFormattingRangeProvider = false
