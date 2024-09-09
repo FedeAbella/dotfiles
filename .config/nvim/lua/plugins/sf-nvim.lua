@@ -141,12 +141,12 @@ return {
         },
         {
             keys = { "n", "<leader>stm" },
-            cmd = [[<cmd>lua require'sf'.run_current_test()<cr>]],
+            cmd = [[<cmd>lua require'sf'.run_current_test_with_coverage()<cr>]],
             desc = "Salesforce: Run Test Method",
         },
         {
             keys = { "n", "<leader>stf" },
-            cmd = [[<cmd>lua require'sf'.run_all_tests_in_this_file()<cr>]],
+            cmd = [[<cmd>lua require'sf'.run_all_tests_in_this_file_with_coverage()<cr>]],
             desc = "Salesforce: Run Test File",
         },
         {
