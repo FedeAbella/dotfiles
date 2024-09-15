@@ -100,6 +100,11 @@ return {
             desc = "Salesforce: Retrieve file",
         },
         {
+            keys = { "v", "<leader>sfr" },
+            cmd = [[<cmd>lua require'sf'.retrieve_apex_under_cursor()<cr>]],
+            desc = "Salesforce: Retrieve file",
+        },
+        {
             keys = { "n", "<leader>sfq" },
             cmd = [[<cmd>lua require'sf'.run_query()<cr>]],
             desc = "Salesforce: Run Query in File",
@@ -125,17 +130,17 @@ return {
             desc = "Salesforce: Retrieve Metadata",
         },
         {
-            keys = { "n", "<leader>sgc" },
+            keys = { "n", "<leader>scc" },
             cmd = [[<cmd>lua require'sf'.create_apex_class()<cr>]],
             desc = "Salesforce: Create Apex Class",
         },
         {
-            keys = { "n", "<leader>sga" },
+            keys = { "n", "<leader>sca" },
             cmd = [[<cmd>lua require'sf'.create_aura_bundle()<cr>]],
             desc = "Salesforce: Create Aura Bundle",
         },
         {
-            keys = { "n", "<leader>sgl" },
+            keys = { "n", "<leader>scl" },
             cmd = [[<cmd>lua require'sf'.create_lwc_bundle()<cr>]],
             desc = "Salesforce: Create LWC Bundle",
         },
