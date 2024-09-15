@@ -20,6 +20,7 @@ return {
                 "html",
                 "markdown",
                 "xml",
+                "python",
             },
             sync_install = false,
             highlight = { enable = true },
