@@ -21,6 +21,8 @@ return {
                 "markdown",
                 "xml",
                 "python",
+                "regex",
+                "markdown_inline",
             },
             sync_install = false,
             highlight = { enable = true },
