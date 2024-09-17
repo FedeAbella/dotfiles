@@ -24,6 +24,12 @@ return {
                     ["vim.lsp.util.stylize_markdown"] = true,
                     ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
                 },
+                hover = {
+                    enabled = false,
+                },
+                signature = {
+                    enabled = false,
+                },
             },
             presets = {
                 bottom_search = false,
@@ -40,6 +46,7 @@ return {
             },
             views = {
                 cmdline_popup = {
+                    relative = "editor",
                     position = {
                         row = 30,
                         col = "50%",
@@ -68,9 +75,9 @@ return {
                     },
                 },
             },
-            cmdline = {
-                view = "cmdline_popup", -- cmdline_popup, cmdline
-            },
+            -- cmdline = {
+            --     view = "cmdline_popup", -- cmdline_popup, cmdline
+            -- },
         })
     end,
 }
