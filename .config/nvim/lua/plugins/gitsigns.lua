@@ -4,6 +4,9 @@ return {
         require("gitsigns").setup({
             numhl = true,
             signs_staged_enable = true,
+            current_line_blame_opts = {
+                delay = 0,
+            },
         })
     end,
     commander = {
@@ -86,6 +89,11 @@ return {
             keys = { "n", "<leader>gfd" },
             cmd = [[<cmd>lua require'gitsigns'.diffthis()<cr>]],
             desc = "Git: Diff buffer",
+        },
+        {
+            keys = { "n", "<leader>gb" },
+            cmd = [[<cmd>lua require'gitsigns'.toggle_current_line_blame()<cr>]],
+            desc = "Git: Toggle Line Blame",
         },
     },
 }
