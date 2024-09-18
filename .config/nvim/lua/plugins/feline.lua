@@ -34,9 +34,13 @@ return {
                     return require("sf").get_target_org()
                 end
                 if pcall(get_org) then
-                    org = require("sf").get_target_org()
-                    coverage = require("sf").covered_percent()
-                    return org .. "(" .. coverage .. ")"
+                    local org = require("sf").get_target_org()
+                    local coverage = require("sf").covered_percent()
+                    if coverage ~= "" then
+                        return org .. " (" .. coverage .. ")"
+                    else
+                        return org
+                    end
                 else
                     return ""
                 end
