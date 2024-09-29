@@ -1,4 +1,8 @@
 vim.g.mapleader = " "
+vim.api.nvim_set_keymap("i", "<Up>", "", {})
+vim.api.nvim_set_keymap("i", "<Down>", "", {})
+vim.api.nvim_set_keymap("i", "<S-Up>", "", {})
+vim.api.nvim_set_keymap("i", "<S-Down>", "", {})
 
 return {
     -- Buffers
