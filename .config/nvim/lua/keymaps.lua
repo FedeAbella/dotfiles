@@ -3,6 +3,10 @@ vim.api.nvim_set_keymap("i", "<Up>", "", {})
 vim.api.nvim_set_keymap("i", "<Down>", "", {})
 vim.api.nvim_set_keymap("i", "<S-Up>", "", {})
 vim.api.nvim_set_keymap("i", "<S-Down>", "", {})
+vim.api.nvim_set_keymap("i", "<Left>", "", {})
+vim.api.nvim_set_keymap("i", "<Right>", "", {})
+vim.api.nvim_set_keymap("i", "<S-Left>", "", {})
+vim.api.nvim_set_keymap("i", "<S-Right>", "", {})
 
 return {
     -- Buffers
