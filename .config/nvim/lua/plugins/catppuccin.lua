@@ -36,6 +36,8 @@ return {
                         DiagnosticVirtualTextWarn = { bg = colors.none },
                         DiagnosticVirtualTextInfo = { bg = colors.none },
                         DiagnosticVirtualTextHint = { bg = colors.none },
+                        DiffChange = { bg = colors.green, fg = colors.surface1 },
+                        DiffDelete = { bg = colors.red, fg = colors.surface1 },
                     }
                 end,
             })
