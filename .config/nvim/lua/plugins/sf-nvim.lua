@@ -26,6 +26,7 @@ return {
                 "ExperienceBundle",
                 "ExternalCredential",
                 "FlexiPage",
+                "FlowDefinition",
                 "Flow",
                 "Layout",
                 "LightningComponentBundle",
