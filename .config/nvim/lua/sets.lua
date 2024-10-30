@@ -1,6 +1,7 @@
 -- Whitespace chars
 vim.opt.listchars =
     { eol = "↲", tab = "▸-", space = "·", nbsp = "␣", trail = "+", extends = "→", precedes = "←" } -- Whitespace characters
+vim.opt.eol = true
 
 -- Line numbering
 vim.opt.number = true -- Show line numbers

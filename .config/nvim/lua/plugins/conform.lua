@@ -4,10 +4,12 @@ return {
         require("conform").setup({
             formatters_by_ft = {
                 lua = { "stylua" },
+                xml = { "prettier" },
             },
             format_on_save = function(bufnr)
                 -- Disable autoformat on certain filetypes
-                local ignore_filetypes = { "xml" }
+                -- local ignore_filetypes = { "xml" }
+                local ignore_filetypes = {}
                 if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
                     return
                 end
