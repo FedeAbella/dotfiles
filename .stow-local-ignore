@@ -2,3 +2,5 @@ pacman-pkglist
 .git
 README.md
 .gitignore
+
+dot-vim*
