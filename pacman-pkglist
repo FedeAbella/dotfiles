@@ -27,6 +27,7 @@ flatpak-kcm
 fzf
 gimp
 git
+git-delta
 github-cli
 gptfdisk
 grub
@@ -145,5 +146,6 @@ webapp-manager-git
 xdg-desktop-portal-kde
 xf86-video-amdgpu
 xorg-xwayland
+zoxide
 zsh
 zsh-syntax-highlighting
