@@ -1,5 +1,8 @@
 ## Personalized z-shell configuration
 
+# XDG envs
+export XDG_CONFIG_HOME=$HOME/.config
+
 ## ALIASES
 
 # Edit the zsh shell configuration
