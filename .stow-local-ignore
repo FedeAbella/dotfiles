@@ -3,4 +3,5 @@ pacman-pkglist
 README.md
 .gitignore
 
-dot-vim*
+dot-vimrc
+dot-vimrc.plug
