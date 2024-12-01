@@ -10,6 +10,7 @@ breeze
 breeze-gtk
 breeze-plymouth
 btrfs-progs
+chromium
 colord-kde
 discord
 discover
@@ -19,6 +20,7 @@ dragon
 drkonqi
 efibootmgr
 elisa
+fastfetch
 ffmpegthumbs
 filelight
 firefox
@@ -85,7 +87,6 @@ lvm2
 man-db
 marble
 milou
-neofetch
 neovim
 network-manager-applet
 networkmanager
