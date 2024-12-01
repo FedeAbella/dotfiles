@@ -26,7 +26,7 @@ alias la='lsd -a'
 alias lla='lsd -al'
 
 ## batcat alias
-alias bat='batcat'
+# alias bat='batcat'
 
 # Misc aliases
 if [[ -n $(command -v fzf) ]]; then
