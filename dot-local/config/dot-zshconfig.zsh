@@ -61,7 +61,7 @@ fi
 PATH=$PATH:$(which ruby)
 
 # JAVA_HOME
-JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+JAVA_HOME=/usr/lib/jvm/java-21-openjdk
 if [ -d $JAVA_HOME ]; then
     PATH=$PATH:$JAVA_HOME/bin
 fi
