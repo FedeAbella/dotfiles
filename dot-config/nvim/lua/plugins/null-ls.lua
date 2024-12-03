@@ -29,7 +29,6 @@ return {
                 null_ls.builtins.diagnostics.actionlint, -- Github actions linter
                 null_ls.builtins.diagnostics.gitlint, -- Git commit linter
                 null_ls.builtins.diagnostics.markdownlint,
-                null_ls.builtins.diagnostics.proselint, -- Actions for English writing
                 null_ls.builtins.diagnostics.pmd.with({
                     -- This requires having set up filetypes for apex and assigning file extensions
                     -- This is done in sets.lua
@@ -60,7 +59,6 @@ return {
                     timeout = 10000,
                 }),
                 null_ls.builtins.diagnostics.trail_space, -- Trailing whitespace for all filetypes
-                null_ls.builtins.diagnostics.write_good,
                 -- Formatting
                 --                null_ls.builtins.formatting.stylua.with({
                 --                    extra_args = { "--respect-ignores" },
@@ -80,6 +78,12 @@ return {
                 }),
                 -- Hovers
                 null_ls.builtins.hover.dictionary,
+                null_ls.builtins.formatting.mdformat.with({
+                    extra_args = {
+                        "--wrap",
+                        80,
+                    },
+                }),
             },
         })
     end,
