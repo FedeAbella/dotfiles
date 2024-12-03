@@ -20,7 +20,7 @@ return {
             keys = { "n", "<leader>ha" },
             cmd = function()
                 local harpoon = require("harpoon")
-                harpoon:list():append()
+                harpoon:list():add()
             end,
             desc = "Harpoon: Append",
         },
