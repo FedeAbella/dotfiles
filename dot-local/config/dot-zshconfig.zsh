@@ -27,6 +27,9 @@ alias ll='lsd -l'
 alias la='lsd -a'
 alias lla='lsd -al'
 
+## kitty aliases
+alias icat='kitten icat'
+
 ## batcat alias
 # alias bat='batcat'
 
