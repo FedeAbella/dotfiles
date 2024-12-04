@@ -12,6 +12,8 @@ breeze-plymouth
 btrfs-progs
 chromium
 colord-kde
+cups
+cups-pdf
 discord
 discover
 dolphin
@@ -35,7 +37,12 @@ gptfdisk
 grub
 gwenview
 highlight
+icaclient
+inkscape
 isoimagewriter
+java-environment-common
+java-runtime-common
+jdk21-openjdk
 kactivitymanagerd
 kalk
 kamoso
@@ -81,6 +88,7 @@ less
 libkscreen
 libksysguard
 libplasma
+libreoffice-still
 linux
 linux-firmware
 lsd
@@ -93,6 +101,7 @@ network-manager-applet
 networkmanager
 networkmanager-openvpn
 nm-connection-editor
+nss-mdns
 ocean-sound-theme
 okular
 oxygen
@@ -122,6 +131,7 @@ polkit-kde-agent
 powerdevil
 print-manager
 proton-pass-bin
+proton-vpn-gtk-app
 qqc2-breeze-style
 qt5-wayland
 qt6-wayland
@@ -134,7 +144,9 @@ spectacle
 steam
 stow
 svgpart
+system-config-printer
 systemsettings
+teams-for-linux
 tldr
 tree
 ttf-firacode-nerd
@@ -147,6 +159,7 @@ wacomtablet
 webapp-manager-git
 xdg-desktop-portal-kde
 xf86-video-amdgpu
+xorg-fonts-100dpi
 xorg-xwayland
 zoxide
 zsh
