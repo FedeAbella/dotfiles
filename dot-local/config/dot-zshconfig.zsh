@@ -30,6 +30,9 @@ alias lla='lsd -al'
 ## kitty aliases
 alias icat='kitten icat'
 
+## pacman aliases
+alias pacman-cleanup='sudo pacman -Qdtq | sudo pacman -Rns -'
+
 ## batcat alias
 # alias bat='batcat'
 
