@@ -100,6 +100,7 @@ command -v pyenv >/dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualen
 ## Export environment vars
 export EDITOR=$(whence nvim)
 export SFDX_DISABLE_DNS_CHECK=true
+export SF_USE_GENERIC_UNIX_KEYCHAIN=true
 export LESS="-RF"
 export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/ripgreprc
 
