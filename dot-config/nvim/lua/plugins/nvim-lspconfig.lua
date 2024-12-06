@@ -36,7 +36,6 @@ return {
                 "sqlls",
                 "taplo",
                 "visualforce_ls",
-                "lemminx",
                 "yamlls",
                 "lwc_ls",
             },
