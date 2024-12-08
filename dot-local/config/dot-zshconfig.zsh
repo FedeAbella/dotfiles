@@ -33,10 +33,7 @@ alias icat='kitten icat'
 ## pacman aliases
 alias pacman-cleanup='sudo pacman -Qdtq | sudo pacman -Rns -'
 
-## batcat alias
-# alias bat='batcat'
-
-# Misc aliases
+# fzf
 if [[ -n $(command -v fzf) ]]; then
     alias whatalias='print -z -- $(alias | fzf | cut -d "=" -f 1)'
     alias fzfb='fzf --preview="batcat --color=always --style=numbers --line-range=:500 {}"'
@@ -51,8 +48,6 @@ fi
 # Script aliases
 alias git-branches='bash ~/.local/scripts/git-branches.sh'
 
-## END ALIASES
-
 ## PATH add-ons
 
 # Local bin path
@@ -63,8 +58,10 @@ if [ -d $HOME/.local/scripts ]; then
     PATH=$HOME/.local/scripts:$PATH
 fi
 
-# Ruby
-PATH=$PATH:$(which ruby)
+# nvm
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # JAVA_HOME
 JAVA_HOME=/usr/lib/jvm/java-21-openjdk
@@ -78,9 +75,9 @@ if [ -d $HOME/.local/bin/Postman ]; then
 fi
 
 #Neovim
-if [ -d $HOME/.local/bin/nvim-linux64 ]; then
-    PATH=$PATH:$HOME/.local/bin/nvim-linux64/bin
-fi
+# if [ -d $HOME/.local/bin/nvim-linux64 ]; then
+#     PATH=$PATH:$HOME/.local/bin/nvim-linux64/bin
+# fi
 
 #Go
 if [ -d /usr/local/go ]; then
@@ -97,70 +94,14 @@ command -v pyenv >/dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualen
 # Generated for envman. Do not edit. (Webi)
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
+# Zoxide
+[[ ! $(command -v zoxide) ]] || eval "$(zoxide init zsh)"
+
 ## Export environment vars
 export EDITOR=$(whence nvim)
 export SFDX_DISABLE_DNS_CHECK=true
 export SF_USE_GENERIC_UNIX_KEYCHAIN=true
 export LESS="-RF"
 export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/ripgreprc
-
-## Navigation
-# Function to navigate up X directories
-# Taken from DT, modified heavily
-up() {
-    local d=""     # start from an empty string
-    local limit=$1 # get parameter
-
-    # error messages
-    local errNonInt="ERROR: up requires positive integer or no parameters"
-    local errOutBound="ERROR: parameter must be between 1 and 99"
-
-    # Default to limit of 1 if null parameter
-    if [ -z $limit ]; then
-        limit=1
-    fi
-
-    # throw error if parameter is not a number
-    (echo $limit | grep -Eq ^[0-9]+$) || (echo $errNonInt && return 1)
-
-    # throw error if parameter is not 1-99
-    if [[ $limit -ge 100 || $limit == 0 ]]; then
-        echo $errOutBound
-        return 1
-    fi
-
-    # construct cd string
-    for ((i = 1; i <= limit; i++)); do
-        d="../$d"
-    done
-
-    cd $d # move
-}
-
-## lsd tree
-# function to call lsd --tree with a given depth more easily
-if [ alias lt ] >/dev/null 2>&1; then
-    unalias lt
-fi
-lt() {
-    local depth=$1 # get parameter
-
-    # error messages
-    local errNonInt="ERROR: lt requires positive integer, or zero (for infinite depth)"
-
-    # Default to limit of 1 if null parameter
-    if [ -z $depth ]; then
-        depth=1
-    fi
-
-    # throw error if parameter is not a number
-    (echo $depth | grep -Eq ^[0-9]+$) || (echo $errNonInt && return 1)
-
-    if [ $depth -eq 0 ]; then
-        lsd --tree
-    else
-        lsd --tree --depth $depth
-    fi
-
-    return
-}
+export ZVM_VI_EDITOR=$EDITOR
+export ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
