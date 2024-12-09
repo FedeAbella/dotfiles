@@ -1,7 +1,14 @@
 return {
     "nvim-telescope/telescope.nvim",
     branch = "0.1.x",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope-ui-select.nvim",
+        {
+            "nvim-telescope/telescope-fzf-native.nvim",
+            build = "make",
+        },
+    },
     config = function()
         local telescope = require("telescope")
         local actions = require("telescope.actions")
@@ -53,18 +60,20 @@ return {
                 },
             },
             extensions = {
+                fzf = {},
                 ["ui-select"] = {
                     require("telescope.themes").get_dropdown({}),
                 },
             },
         })
         telescope.load_extension("ui-select")
+        telescope.load_extension("fzf")
     end,
     commander = {
         -- Find stuff
         {
             keys = { "n", "<leader>ff" },
-            cmd = [[<cmd> Telescope find_files<cr>]],
+            cmd = [[<cmd>Telescope find_files<cr>]],
             desc = "Telescope: Find files",
         },
         { keys = { "n", "<leader>ft" }, cmd = [[<cmd>Telescope live_grep<cr>]], desc = "Telescope: Find text" },
