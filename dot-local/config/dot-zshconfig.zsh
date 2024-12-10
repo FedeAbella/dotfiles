@@ -6,6 +6,7 @@ export XDG_DATA_HOME="$HOME"/.local/share
 export XDG_STATE_HOME="$HOME"/.local/state
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc":"$XDG_CONFIG_HOME/gtk-2.0/gtkrc.mine"
+[ -d $XDG_STATE_HOME/zsh ] || mkdir $XDG_STATE_HOME/zsh
 HISTFILE="$XDG_STATE_HOME"/zsh/history
 
 ## ALIASES
@@ -43,6 +44,12 @@ if [[ -n $(command -v fzf) ]]; then
     --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
     --multi"
     export FZF_DEFAULT_COMMAND='fd --hidden --strip-cwd-prefix --exclude .git'
+
+    # zsh shell integration
+    source /usr/share/fzf/completion.zsh
+    source /usr/share/fzf/key-bindings.zsh
+    # run the source after zsh-vi-mode, otherwise the keybindings are overwritten
+    zvm_after_init_commands+=('source <(fzf --zsh)')
 fi
 
 # Script aliases
