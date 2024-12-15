@@ -86,6 +86,7 @@ kwayland
 kwin
 kwrited
 layer-shell-qt
+lazygit
 less
 libkscreen
 libksysguard
@@ -112,6 +113,7 @@ pacman-contrib
 partitionmanager
 paru
 paru-debug
+pipewire-alsa
 plasma-activities
 plasma-activities-stats
 plasma-browser-integration
@@ -159,6 +161,7 @@ unzip
 vulkan-radeon
 wacomtablet
 webapp-manager-git
+wget
 wl-clipboard
 xdg-desktop-portal-kde
 xf86-video-amdgpu
