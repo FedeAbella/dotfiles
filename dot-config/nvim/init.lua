@@ -4,9 +4,4 @@ require("lib.misc")
 require("keymaps")
 
 -- lazy.nvim plugins
-require("lazyvim")
-require("lazy").setup("plugins", {
-    dev = {
-        path = "~/Git",
-    },
-})
+require("config.lazy")
