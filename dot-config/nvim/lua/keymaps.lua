@@ -1,4 +1,7 @@
+-- Set the leader key
 vim.g.mapleader = " "
+
+-- Remove arrow keys while on insert mode
 vim.api.nvim_set_keymap("i", "<Up>", "", {})
 vim.api.nvim_set_keymap("i", "<Down>", "", {})
 vim.api.nvim_set_keymap("i", "<S-Up>", "", {})
@@ -10,11 +13,8 @@ vim.api.nvim_set_keymap("i", "<S-Right>", "", {})
 
 return {
     -- Buffers
-    { keys = { "n", "<A-c>" }, cmd = vim.cmd.bdelete, desc = "Buffers: Close current" },
     { keys = { "n", "<C-h>" }, cmd = vim.cmd.bnext, desc = "Buffers: Next" },
     { keys = { "n", "<C-l>" }, cmd = vim.cmd.bprevious, desc = "Buffers: Previous" },
-    { keys = { "n", "<A-C>" }, cmd = [[<cmd>%bd|e#|bd#<cr>|'"]], desc = "Buffers: Close others" },
-    { keys = { "n", "<leader>'" }, cmd = [[<C-^>]], desc = "Buffers: Last" },
 
     -- Terminal
     { keys = { "t", "<esc>" }, cmd = [[<C-\><C-n>]], desc = "Terminal: Quit", show = false },
