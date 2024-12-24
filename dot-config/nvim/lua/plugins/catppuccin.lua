@@ -11,7 +11,6 @@ return {
                     enabled = true,
                 },
                 integrations = {
-                    neotree = true,
                     notify = true,
                     mason = true,
                 },
