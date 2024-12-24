@@ -14,9 +14,6 @@ return {
             dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
             dashboard.button("r", "󰄉  Recent files", ":Telescope oldfiles <CR>"),
             dashboard.button("u", "󱐥  Update plugins", "<cmd>Lazy update<CR>"),
-            -- dashboard.button("c", "  Settings", ":e $HOME/.config/nvim/init.lua<CR>"),
-            -- dashboard.button("p", "  Projects", ":e $HOME/Documents/github <CR>"),
-            -- dashboard.button("d", "󱗼  Dotfiles", ":e $HOME/.dotfiles <CR>"),
             dashboard.button("q", "󰿅  Quit", "<cmd>qa<CR>"),
         }
 
@@ -33,7 +30,6 @@ return {
 
         local function getGreeting(name)
             local tableTime = os.date("*t")
-            local datetime = os.date(" %Y-%m-%d-%A   %H:%M:%S ")
             local hour = tableTime.hour
             local greetingsTable = {
                 [1] = "  Sleep well",
@@ -65,7 +61,7 @@ return {
             once = true,
             callback = function()
                 local stats = require("lazy").stats()
-                local ms = math.floor(stats.startuptime * 100 + 0.5) / 100
+                local ms = string.format("%.2f", stats.startuptime)
                 dashboard.section.footer.val = {
                     "",
                     os.date("  %A, %Y-%m-%d   %H:%M:%S"),
