@@ -3,7 +3,6 @@ return {
     config = function()
         require("gitsigns").setup({
             numhl = true,
-            signs_staged_enable = true,
             current_line_blame_opts = {
                 delay = 0,
             },
@@ -17,7 +16,7 @@ return {
                     return "[c"
                 end
                 vim.schedule(function()
-                    require("gitsigns").prev_hunk()
+                    require("gitsigns").nav_hunk("prev")
                 end)
                 return "<Ignore>"
             end,
@@ -30,7 +29,7 @@ return {
                     return "]c"
                 end
                 vim.schedule(function()
-                    require("gitsigns").next_hunk()
+                    require("gitsigns").nav_hunk("next")
                 end)
                 return "<Ignore>"
             end,
@@ -69,21 +68,6 @@ return {
             keys = { "n", "<leader>ghp" },
             cmd = [[<cmd>lua require'gitsigns'.preview_hunk()<cr>]],
             desc = "Git: Preview hunk",
-        },
-        {
-            keys = { "n", "<leader>gfs" },
-            cmd = [[<cmd>lua require'gitsigns'.stage_buffer()<cr>]],
-            desc = "Git: Stage buffer",
-        },
-        {
-            keys = { "n", "<leader>gfr" },
-            cmd = [[<cmd>lua require'gitsigns'.reset_buffer()<cr>]],
-            desc = "Git: Reset buffer",
-        },
-        {
-            keys = { "n", "<leader>gfu" },
-            cmd = [[<cmd>lua require'gitsigns'.reset_buffer_index()<cr>]],
-            desc = "Git: Undo all stages in file",
         },
         {
             keys = { "n", "<leader>gfd" },
