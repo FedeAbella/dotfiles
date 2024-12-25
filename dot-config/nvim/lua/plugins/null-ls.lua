@@ -76,14 +76,15 @@ return {
                         "--case-indent",
                     },
                 }),
-                -- Hovers
-                null_ls.builtins.hover.dictionary,
                 null_ls.builtins.formatting.mdformat.with({
                     extra_args = {
                         "--wrap",
                         80,
                     },
                 }),
+                null_ls.builtins.formatting.stylua,
+                -- Hovers
+                null_ls.builtins.hover.dictionary,
             },
         })
     end,
