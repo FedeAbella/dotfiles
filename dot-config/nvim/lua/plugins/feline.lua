@@ -1,5 +1,5 @@
 return {
-    "feline-nvim/feline.nvim",
+    "freddiehaddad/feline.nvim",
     after = "catppuccin",
     config = function()
         local ctp_feline = require("catppuccin.groups.integrations.feline")
@@ -7,11 +7,25 @@ return {
         ctp_feline.setup({
             assets = {
                 mode_icon = "",
+                git = {
+                    branch = "󰘬",
+                    added = "",
+                    changed = "",
+                    removed = "",
+                },
+                lsp = {
+                    server = "",
+                },
             },
             sett = {
                 show_modified = true,
                 bkg = colors.base,
                 extras = colors.subtext0,
+            },
+            view = {
+                lsp = {
+                    name = true,
+                },
             },
         })
 
@@ -56,7 +70,13 @@ return {
                 fg = colors.subtext0,
                 bg = colors.base,
             },
+            truncate_hide = true,
         }
+        components.active[1][10].truncate_hide = true
+        components.active[1][11].truncate_hide = true
+        components.active[3][1].truncate_hide = true
+        components.active[3][2].truncate_hide = true
+        components.active[3][4].truncate_hide = true
         require("feline").setup({
             components = components,
         })
