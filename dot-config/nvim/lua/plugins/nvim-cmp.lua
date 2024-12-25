@@ -2,7 +2,46 @@ return {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     dependencies = {
-        { "L3MON4D3/LuaSnip", "saadparwaiz1/cmp_luasnip", "onsails/lspkind.nvim" },
+        {
+            {
+                "L3MON4D3/LuaSnip",
+                lazy = true,
+                dependencies = {
+                    "rafamadriz/friendly-snippets",
+                },
+                config = function()
+                    require("luasnip")
+                    require("luasnip.loaders.from_lua").lazy_load({ paths = { "./snippets" } })
+                    require("luasnip.loaders.from_vscode").lazy_load()
+                end,
+                commander = {
+                    {
+                        keys = { { "i", "s" }, "<C-j>", { silent = true } },
+                        cmd = [[<cmd>lua require'luasnip'.jump(1)<cr>]],
+                        desc = "LuaSnip: Next Suggestion",
+                        show = false,
+                    },
+                    {
+                        keys = { { "i", "s" }, "<C-k>", { silent = true } },
+                        cmd = [[<cmd>lua require'luasnip'.jump(-1)<cr>]],
+                        desc = "LuaSnip: Previous Suggestion",
+                        show = false,
+                    },
+                    {
+                        keys = { { "i", "s" }, "<C-E>", { silent = true } },
+                        cmd = function()
+                            if require("luasnip").choice_active() then
+                                require("luasnip").change_choice(1)
+                            end
+                        end,
+                        desc = "LuaSnip: Next Choice",
+                        show = false,
+                    },
+                },
+            },
+            "saadparwaiz1/cmp_luasnip",
+            "onsails/lspkind.nvim",
+        },
     },
     config = function()
         -- Here is where you configure the autocompletion settings.
