@@ -1,9 +1,6 @@
 return {
     "folke/noice.nvim",
     event = "VeryLazy",
-    opts = {
-        -- add any options here
-    },
     dependencies = {
         -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
         "MunifTanjim/nui.nvim",
@@ -18,12 +15,6 @@ return {
                 progress = {
                     enabled = false,
                 },
-                -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
-                override = {
-                    ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-                    ["vim.lsp.util.stylize_markdown"] = true,
-                    ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
-                },
                 hover = {
                     enabled = false,
                 },
@@ -33,7 +24,7 @@ return {
             },
             presets = {
                 bottom_search = false,
-                -- command_palette = true,
+                command_palette = true,
             },
             routes = {
                 {
@@ -44,40 +35,6 @@ return {
                     },
                 },
             },
-            views = {
-                cmdline_popup = {
-                    relative = "editor",
-                    position = {
-                        row = 30,
-                        col = "50%",
-                    },
-                    size = {
-                        width = "auto",
-                        height = "auto",
-                    },
-                },
-                popupmenu = {
-                    relative = "editor",
-                    position = {
-                        row = 33,
-                        col = "50%",
-                    },
-                    size = {
-                        width = 70, -- Making this as wide as the cmdline_popup
-                        height = "auto",
-                    },
-                    border = {
-                        style = "rounded",
-                        padding = { 0, 1 },
-                    },
-                    win_options = {
-                        winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
-                    },
-                },
-            },
-            -- cmdline = {
-            --     view = "cmdline_popup", -- cmdline_popup, cmdline
-            -- },
         })
     end,
 }
