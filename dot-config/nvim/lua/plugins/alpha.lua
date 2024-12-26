@@ -9,7 +9,7 @@ return {
 
     dashboard.section.buttons.val = {
       dashboard.button("n", "  New file", ":ene <BAR> startinsert <CR>"),
-      dashboard.button("e", "󰦄  Explore", ":Oil<CR>"),
+      dashboard.button("e", "󰦄  Explore", ":Oil --float .<CR>"),
       dashboard.button("f", "  Find file", ":Telescope find_files hidden=true no_ignore=true <CR>"),
       dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
       dashboard.button("r", "󰄉  Recent files", ":Telescope oldfiles <CR>"),
