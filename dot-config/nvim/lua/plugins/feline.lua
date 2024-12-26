@@ -1,6 +1,6 @@
 return {
   "freddiehaddad/feline.nvim",
-  after = "catppuccin",
+  lazy = false,
   opts = function()
     local ctp_feline = require("catppuccin.groups.integrations.feline")
     local colors = require("catppuccin.palettes").get_palette()
