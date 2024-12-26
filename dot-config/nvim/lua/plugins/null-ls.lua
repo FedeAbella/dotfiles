@@ -14,8 +14,6 @@ return {
                         group = augroup,
                         buffer = bufnr,
                         callback = function()
-                            -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-                            -- on later neovim version, you should use vim.lsp.buf.format({ async = false }) instead
                             vim.lsp.buf.format({ async = false })
                         end,
                     })
@@ -24,7 +22,7 @@ return {
             sources = {
                 -- Code Actions
                 null_ls.builtins.code_actions.gitsigns, -- Actions for git hunks
-                null_ls.builtins.code_actions.proselint, -- Actions for English writing
+
                 -- Diagnostics
                 null_ls.builtins.diagnostics.actionlint, -- Github actions linter
                 null_ls.builtins.diagnostics.gitlint, -- Git commit linter
@@ -59,16 +57,20 @@ return {
                     timeout = 10000,
                 }),
                 null_ls.builtins.diagnostics.trail_space, -- Trailing whitespace for all filetypes
+
                 -- Formatting
-                --                null_ls.builtins.formatting.stylua.with({
-                --                    extra_args = { "--respect-ignores" },
-                --                }),
-                null_ls.builtins.formatting.prettier.with({
+                null_ls.builtins.formatting.blackd,
+                null_ls.builtins.formatting.isortd,
+                null_ls.builtins.formatting.mdformat.with({
+                    extra_args = {
+                        "--wrap",
+                        80,
+                    },
+                }),
+                null_ls.builtins.formatting.prettierd.with({
                     timeout = 10000,
                     extra_filetypes = { "apex" },
                 }),
-                null_ls.builtins.formatting.black,
-                null_ls.builtins.formatting.isort,
                 null_ls.builtins.formatting.shfmt.with({
                     extra_args = {
                         "--indent",
@@ -76,23 +78,11 @@ return {
                         "--case-indent",
                     },
                 }),
-                null_ls.builtins.formatting.mdformat.with({
-                    extra_args = {
-                        "--wrap",
-                        80,
-                    },
-                }),
                 null_ls.builtins.formatting.stylua,
+
                 -- Hovers
                 null_ls.builtins.hover.dictionary,
             },
         })
     end,
-    commander = {
-        {
-            keys = { "n", "<leader>]" },
-            cmd = [[<cmd>lua vim.lsp.buf.format()<cr>]],
-            desc = "Format file",
-        },
-    },
 }
