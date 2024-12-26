@@ -20,7 +20,7 @@ return {
                 delete = "<C-s>d",
                 change = "<C-s>c",
                 change_line = "<C-s>cl",
-            }
+            },
             -- Configuration here, or leave empty to use defaults
         })
         vim.api.nvim_set_hl(0, "NvimSurroundHighlight", { fg = colors.mantle, bg = colors.sapphire })
