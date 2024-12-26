@@ -1,16 +1,15 @@
 return {
-    {
-        "windwp/nvim-autopairs",
-        event = "InsertEnter",
-        config = true,
-    },
-    {
-        "windwp/nvim-ts-autotag",
-        dependencies = "nvim-treesitter/nvim-treesitter",
-        config = function()
-            require("nvim-ts-autotag").setup()
-        end,
-        lazy = true,
-        event = "VeryLazy",
-    },
+  {
+    "windwp/nvim-autopairs",
+    config = true,
+    lazy = true,
+    event = "InsertEnter",
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = true,
+    lazy = true,
+    event = "VeryLazy",
+  },
 }
