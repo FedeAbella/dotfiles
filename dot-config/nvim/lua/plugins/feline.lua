@@ -1,6 +1,7 @@
 return {
   "freddiehaddad/feline.nvim",
   lazy = false,
+  priority = 800,
   opts = function()
     local ctp_feline = require("catppuccin.groups.integrations.feline")
     local colors = require("catppuccin.palettes").get_palette()

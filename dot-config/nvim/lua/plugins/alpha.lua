@@ -4,6 +4,8 @@ return {
     "nvim-lua/plenary.nvim",
     "nvim-tree/nvim-web-devicons",
   },
+  lazy = false,
+  priority = 900,
   opts = function()
     local dashboard = require("alpha.themes.dashboard")
 
@@ -53,8 +55,6 @@ return {
       return greetingsTable[greetingIndex] .. ", " .. name
     end
 
-    local greeting = getGreeting("Fede")
-
     vim.api.nvim_create_autocmd("User", {
       pattern = "LazyVimStarted",
       desc = "Add Alpha dashboard footer",
@@ -66,7 +66,7 @@ return {
           "",
           os.date("  %A, %Y-%m-%d   %H:%M:%S"),
           "",
-          greeting,
+          getGreeting("Fede"),
           "",
           "  Loaded " .. stats.loaded .. " plugins   in " .. ms .. " ms ",
         }
