@@ -40,6 +40,7 @@ vim.filetype.add({
 -- Misc
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.expand("~") .. "/.config/nvim/undo-dir"
+vim.opt.signcolumn = "yes"
 
 -- Set the leader key
 vim.g.mapleader = " "

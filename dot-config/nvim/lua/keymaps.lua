@@ -87,8 +87,8 @@ commander.add({
 
   -- Editing
   { keys = { "n", "<leader>w" }, cmd = ":w<cr>", desc = "Write file" },
-  { keys = { "v", "J" }, cmd = ":m '>+1<cr>gv=gv", desc = "Move selection up" },
-  { keys = { "v", "K" }, cmd = ":m '<-2<cr>gv=gv", desc = "Move selection down" },
+  { keys = { "v", "<C-j>" }, cmd = ":m '>+1<cr>gv=gv", desc = "Move selection up" },
+  { keys = { "v", "<C-k>" }, cmd = ":m '<-2<cr>gv=gv", desc = "Move selection down" },
   { keys = { "x", "<leader>p" }, cmd = '"_dP', desc = "Paste, but don't replace register" },
   { keys = { "n", "<leader>y" }, cmd = '"+y', desc = "Yank into clipboard" },
   { keys = { "v", "<leader>y" }, cmd = '"+y', desc = "Yank into clipboard" },
