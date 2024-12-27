@@ -1,6 +1,6 @@
 -- Whitespace chars
 vim.opt.listchars =
-    { eol = "↲", tab = "▸-", space = "·", nbsp = "␣", trail = "+", extends = "→", precedes = "←" } -- Whitespace characters
+  { eol = "↲", tab = "▸-", space = "·", nbsp = "␣", trail = "+", extends = "→", precedes = "←" } -- Whitespace characters
 
 -- Line numbering
 vim.o.number = true -- Show line numbers
@@ -24,19 +24,32 @@ vim.o.scrolloff = 8 -- Always keep at least 8 lines before and after cursor
 
 -- Filetypes
 vim.filetype.add({
-    extension = {
-        cls = "apex",
-        apex = "apex",
-        trigger = "apex",
-        soql = "soql",
-        sosl = "sosl",
-        zsh = "sh",
-    },
-    filename = {
-        [".zshrc"] = "sh",
-    },
+  extension = {
+    cls = "apex",
+    apex = "apex",
+    trigger = "apex",
+    soql = "soql",
+    sosl = "sosl",
+    zsh = "sh",
+  },
+  filename = {
+    [".zshrc"] = "sh",
+  },
 })
 
 -- Misc
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.expand("~") .. "/.config/nvim/undo-dir"
+
+-- Set the leader key
+vim.g.mapleader = " "
+
+-- Remove arrow keys while on insert mode
+vim.api.nvim_set_keymap("i", "<Up>", "", {})
+vim.api.nvim_set_keymap("i", "<Down>", "", {})
+vim.api.nvim_set_keymap("i", "<S-Up>", "", {})
+vim.api.nvim_set_keymap("i", "<S-Down>", "", {})
+vim.api.nvim_set_keymap("i", "<Left>", "", {})
+vim.api.nvim_set_keymap("i", "<Right>", "", {})
+vim.api.nvim_set_keymap("i", "<S-Left>", "", {})
+vim.api.nvim_set_keymap("i", "<S-Right>", "", {})
