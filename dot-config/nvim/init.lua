@@ -5,3 +5,6 @@ require("keymaps")
 
 -- lazy.nvim plugins
 require("config.lazy")
+
+-- after plugins, override highlights
+require("colorscheme")
