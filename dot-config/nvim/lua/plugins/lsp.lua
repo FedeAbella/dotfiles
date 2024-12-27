@@ -104,7 +104,15 @@ return {
     cmd = { "LspInfo", "LspInstall", "LspStart" },
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
-      { "williamboman/mason.nvim", lazy = false, config = true },
+      {
+        "williamboman/mason.nvim",
+        lazy = false,
+        opts = {
+          ui = {
+            border = "rounded",
+          },
+        },
+      },
       { "williamboman/mason-lspconfig.nvim" },
       { "hrsh7th/cmp-nvim-lsp" },
     },
