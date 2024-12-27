@@ -68,7 +68,7 @@ return {
           "",
           greeting,
           "",
-          "  Loaded " .. stats.count .. " plugins   in " .. ms .. " ms ",
+          "  Loaded " .. stats.loaded .. " plugins   in " .. ms .. " ms ",
         }
         pcall(vim.cmd.AlphaRedraw)
       end,
