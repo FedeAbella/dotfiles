@@ -35,6 +35,9 @@ vim.filetype.add({
   filename = {
     [".zshrc"] = "sh",
   },
+  pattern = {
+    [".*/hypr/.*%.conf"] = "hyprlang",
+  },
 })
 
 -- Misc

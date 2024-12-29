@@ -22,6 +22,7 @@ return {
         "python",
         "regex",
         "markdown_inline",
+        "hyprlang",
       },
       highlight = { enable = true },
       indent = { enable = true },
