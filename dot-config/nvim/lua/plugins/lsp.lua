@@ -159,6 +159,9 @@ return {
         },
         automatic_installation = true,
         handlers = {
+          function(server_name)
+            require("lspconfig")[server_name].setup({})
+          end,
           apex_ls = function()
             require("lspconfig").apex_ls.setup({
               filetypes = { "apex" },
