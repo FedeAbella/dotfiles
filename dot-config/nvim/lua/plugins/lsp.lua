@@ -143,14 +143,13 @@ return {
           "apex_ls",
           "bashls",
           "cssls",
-          "harper_ls",
           "lwc_ls",
           "eslint",
           "ts_ls",
           "jsonls",
           "lua_ls",
           "marksman",
-          "jedi_language_server",
+          "pylsp",
           "graphql",
           "sqlls",
           "visualforce_ls",
@@ -189,6 +188,23 @@ return {
                 client.server_capabilities.documentFormattingProvider = false
                 client.server_capabilities.documentFormattingRangeProvider = false
               end,
+            })
+          end,
+          pylsp = function()
+            require("lspconfig").pylsp.setup({
+              settings = {
+                pylsp = {
+                  plugins = {
+                    jedi_completion = {
+                      enabled = true,
+                      include_params = true,
+                    },
+                    rope_autoimport = {
+                      enabled = true,
+                    },
+                  },
+                },
+              },
             })
           end,
         },
