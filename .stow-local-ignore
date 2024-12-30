@@ -1,7 +1,6 @@
-pacman-pkglist
 .git
 README.md
 .gitignore
 
-dot-vimrc
-dot-vimrc.plug
+pacman-pkglist
+stylus
