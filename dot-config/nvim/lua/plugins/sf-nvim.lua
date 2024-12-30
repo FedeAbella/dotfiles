@@ -1,8 +1,9 @@
 return {
   "xixiaofinland/sf.nvim",
   name = "sf.nvim",
-  branch = "main",
-  dev = false,
+  branch = "feature/fix-mkdir",
+  dev = true,
+  dir = "~/coding/sf.nvim",
   lazy = true,
   event = "VeryLazy",
   cond = function()

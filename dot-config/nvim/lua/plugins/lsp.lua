@@ -155,6 +155,8 @@ return {
           "visualforce_ls",
           "lemminx",
           "yamlls",
+          "hyprls",
+          "jedi_language_server",
         },
         automatic_installation = true,
         handlers = {
@@ -196,13 +198,22 @@ return {
                 pylsp = {
                   plugins = {
                     jedi_completion = {
-                      enabled = true,
+                      enabled = false,
                       include_params = true,
                     },
                     rope_autoimport = {
                       enabled = true,
                     },
                   },
+                },
+              },
+            })
+          end,
+          jedi_language_server = function()
+            require("lspconfig").jedi_language_server.setup({
+              init_options = {
+                diagnostics = {
+                  enable = false,
                 },
               },
             })
