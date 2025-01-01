@@ -65,7 +65,12 @@ return {
           null_ls.builtins.diagnostics.trail_space, -- Trailing whitespace for all filetypes
 
           -- Formatting
-          null_ls.builtins.formatting.black,
+          null_ls.builtins.formatting.black.with({
+            extra_args = {
+              "--line-length",
+              79,
+            },
+          }),
           null_ls.builtins.formatting.isort,
           null_ls.builtins.formatting.mdformat.with({
             extra_args = {
