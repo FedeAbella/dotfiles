@@ -1,7 +1,6 @@
 return {
   "xixiaofinland/sf.nvim",
   name = "sf.nvim",
-  branch = "feature/fix-mkdir",
   dev = false,
   -- dir = "~/coding/sf.nvim",
   lazy = true,
