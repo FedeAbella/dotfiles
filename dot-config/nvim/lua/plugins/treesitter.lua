@@ -3,6 +3,8 @@ return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     main = "nvim-treesitter.configs",
+    lazy = true,
+    event = "VeryLazy",
     opts = {
       auto_install = false,
       ensure_installed = {
@@ -31,10 +33,14 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter-context",
+    lazy = true,
+    event = "VeryLazy",
   },
   {
     "HiPhish/rainbow-delimiters.nvim",
     main = "rainbow-delimiters.setup",
+    lazy = true,
+    event = "VeryLazy",
     config = true,
   },
 }

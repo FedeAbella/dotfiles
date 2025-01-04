@@ -168,6 +168,14 @@ return {
               filetypes = { "apex" },
             })
           end,
+          bashls = function()
+            require("lspconfig").bashls.setup({
+              on_init = function(client)
+                client.server_capabilities.documentFormattingProvider = false
+                client.server_capabilities.documentFormattingRangeProvider = false
+              end,
+            })
+          end,
           cssls = function()
             require("lspconfig").cssls.setup({
               on_init = function(client)
@@ -216,6 +224,9 @@ return {
                   enable = false,
                 },
               },
+              on_init = function(client)
+                client.server_capabilities.renameProvider = false
+              end,
             })
           end,
         },
