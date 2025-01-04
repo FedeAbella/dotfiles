@@ -1,6 +1,8 @@
 return {
   {
     "nvimtools/none-ls.nvim",
+    cmd = { "LspInfo", "LspInstall", "LspStart" },
+    event = { "BufReadPre", "BufNewFile" },
     dependencies = {
       { "nvim-lua/plenary.nvim" },
     },

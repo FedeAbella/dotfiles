@@ -1,6 +1,7 @@
 return {
   "freddiehaddad/feline.nvim",
-  lazy = false,
+  lazy = true,
+  event = "VimEnter",
   priority = 800,
   opts = function()
     local ctp_feline = require("catppuccin.groups.integrations.feline")

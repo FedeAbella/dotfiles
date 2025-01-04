@@ -1,5 +1,6 @@
 return {
   "FeiyouG/commander.nvim",
+  lazy = true,
   dependencies = { "nvim-telescope/telescope.nvim" },
   opts = {
     components = {

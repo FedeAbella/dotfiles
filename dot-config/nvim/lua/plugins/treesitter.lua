@@ -23,6 +23,7 @@ return {
         "regex",
         "markdown_inline",
         "hyprlang",
+        "rasi",
       },
       highlight = { enable = true },
       indent = { enable = true },
