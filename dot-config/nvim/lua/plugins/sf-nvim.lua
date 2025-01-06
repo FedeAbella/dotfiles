@@ -1,6 +1,7 @@
 return {
   "xixiaofinland/sf.nvim",
   name = "sf.nvim",
+  branch = "main",
   dev = false,
   -- dir = "~/coding/sf.nvim",
   lazy = true,
