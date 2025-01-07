@@ -168,38 +168,6 @@ return {
               filetypes = { "apex" },
             })
           end,
-          bashls = function()
-            require("lspconfig").bashls.setup({
-              on_init = function(client)
-                client.server_capabilities.documentFormattingProvider = false
-                client.server_capabilities.documentFormattingRangeProvider = false
-              end,
-            })
-          end,
-          cssls = function()
-            require("lspconfig").cssls.setup({
-              on_init = function(client)
-                client.server_capabilities.documentFormattingProvider = false
-                client.server_capabilities.documentFormattingRangeProvider = false
-              end,
-            })
-          end,
-          ts_ls = function()
-            require("lspconfig").ts_ls.setup({
-              on_init = function(client)
-                client.server_capabilities.documentFormattingProvider = false
-                client.server_capabilities.documentFormattingRangeProvider = false
-              end,
-            })
-          end,
-          lua_ls = function()
-            require("lspconfig").lua_ls.setup({
-              on_init = function(client)
-                client.server_capabilities.documentFormattingProvider = false
-                client.server_capabilities.documentFormattingRangeProvider = false
-              end,
-            })
-          end,
           pylsp = function()
             require("lspconfig").pylsp.setup({
               settings = {
