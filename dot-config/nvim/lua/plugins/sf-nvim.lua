@@ -12,7 +12,9 @@ return {
   end,
   dependencies = {
     "nvim-treesitter/nvim-treesitter",
-    "ibhagwan/fzf-lua",
+    { "ibhagwan/fzf-lua", opts = {
+      fzf_colors = true,
+    } },
   },
   opts = {
     types_to_retrieve = {
