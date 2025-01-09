@@ -10,6 +10,6 @@ return {
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     config = true,
     lazy = true,
-    event = "VeryLazy",
+    event = { "BufNewFile", "BufReadPost" },
   },
 }

@@ -2,7 +2,7 @@ return {
   "stevearc/oil.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   lazy = true,
-  event = "VeryLazy",
+  event = "VimEnter",
   opts = {
     columns = {
       "icon",

@@ -2,7 +2,7 @@
 return {
   "rasulomaroff/reactive.nvim",
   lazy = true,
-  event = "VeryLazy",
+  event = { "BufNewFile", "BufReadPre" },
   opts = {
     load = {
       "catppuccin-mocha-cursor",
