@@ -37,6 +37,7 @@ return {
           DiffChange = { bg = colors.green, fg = colors.surface1 },
           DiffDelete = { bg = colors.red, fg = colors.surface1 },
           VirtColumn = { bg = "", fg = colors.peach },
+          WinSeparator = { fg = colors.rosewater },
         }
       end,
     },

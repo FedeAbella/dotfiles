@@ -37,11 +37,12 @@ return {
         name = "file_info",
         opts = {
           file_modified_icon = "%m",
+          colored_icon = false,
         },
       },
       hl = {
-        fg = colors.overlay2,
-        bg = colors.mantle,
+        fg = colors.text,
+        bg = colors.surface2,
       },
     }
     components.active[1][13] = {
