@@ -36,6 +36,7 @@ return {
           DiagnosticVirtualTextHint = { bg = colors.none },
           DiffChange = { bg = colors.green, fg = colors.surface1 },
           DiffDelete = { bg = colors.red, fg = colors.surface1 },
+          VirtColumn = { bg = "", fg = colors.peach },
         }
       end,
     },
