@@ -11,20 +11,42 @@ return {
     "rcarriga/nvim-notify",
   },
   opts = {
+    cmdline = {
+      view = "cmdline",
+    },
     lsp = {
       progress = {
         enabled = false,
+        override = {
+          ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+          ["vim.lsp.util.stylize_markdown"] = true,
+          ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
+        },
       },
       hover = {
-        enabled = false,
+        enabled = true,
+        opts = {
+          border = {
+            style = "rounded",
+          },
+        },
       },
       signature = {
-        enabled = false,
+        enabled = true,
+        opts = {
+          border = {
+            style = "rounded",
+          },
+          position = {
+            row = 3,
+          },
+        },
       },
     },
     presets = {
-      bottom_search = false,
-      command_palette = true,
+      bottom_search = true,
+      command_palette = false,
+      long_message_to_split = true,
     },
     routes = {
       {
