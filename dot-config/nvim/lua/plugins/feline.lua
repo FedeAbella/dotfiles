@@ -45,6 +45,7 @@ return {
         bg = colors.surface2,
       },
     }
+    components.active[1][12].hl.fg = colors.red
     components.active[1][13] = {
       provider = function()
         local function get_org()
