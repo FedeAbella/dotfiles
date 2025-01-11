@@ -34,6 +34,9 @@ alias icat='kitten icat'
 ## pacman aliases
 alias pacman-cleanup='sudo pacman -Qdtq | sudo pacman -Rns -'
 
+## hyprland aliases
+alias hyprconfig='nvim $HOME/.config/hypr/hyprland.conf'
+
 # fzf
 if [[ -n $(command -v fzf) ]]; then
     alias whatalias='print -z -- $(alias | fzf | cut -d "=" -f 1)'
@@ -112,3 +115,4 @@ export LESS="-RF"
 export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/ripgreprc
 export ZVM_VI_EDITOR=$EDITOR
 export ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
+export TERM=kitty

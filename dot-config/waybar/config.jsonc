@@ -1,0 +1,167 @@
+// -*- mode: jsonc -*-
+{
+  "layer": "top", // Waybar at top layer
+  "position": "top", // Waybar position (top|bottom|left|right)
+  // Choose the order of the modules
+  "modules-left": ["clock", "custom/weather", "mpris"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "custom/capslock",
+    "custom/privacy",
+    "custom/pacman",
+    "pulseaudio",
+    "cpu",
+    "memory",
+    "bluetooth",
+    "network",
+    "custom/swaync",
+    "tray",
+    "custom/power",
+  ],
+  // Modules configuration
+  "hyprland/window": {
+    "format": "{title}",
+    "separate-outputs": true,
+    "icon": true,
+    "icon-size": 18,
+    "max-length": 40,
+  },
+  "clock": {
+    "format": "{:%A, %d %b %Y - %H:%M}",
+    "tooltip-format": "<tt><big>{calendar}</big></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#f2cdcd'><b>{}</b></span>",
+        "days": "<span color='#cdd6f4'><b>{}</b></span>",
+        "weekdays": "<span color='#fab387'><b>{}</b></span>",
+        "today": "<span color='#f38ba8'><b>{}</b></span>",
+      },
+    },
+    "actions": {
+      "on-click-right": "mode",
+    },
+  },
+  "custom/weather": {
+    "return-type": "json",
+    "exec": "~/.config/waybar/custom/weather.sh",
+    "interval": 600,
+    "format": "{}",
+  },
+  "mpris": {
+    "ignored-players": ["firefox", "plasma-browser-integration"],
+    "format": "{status_icon} {dynamic}",
+    "status-icons": {
+      "playing": " ",
+      "paused": " ",
+      "stopped": " ",
+    },
+    "dynamic-len": 70,
+    "interval": 1,
+  },
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "empty": "",
+      "active": "",
+      "visible": "",
+    },
+  },
+  "custom/privacy": {
+    "format": "{}",
+    "exec": "~/.config/waybar/custom/privacy.sh",
+    "return-type": "json",
+    "interval": 5,
+  },
+  "custom/capslock": {
+    "exec": "~/.config/waybar/custom/capslock.sh",
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+      "locked": "󰪛 ",
+      "unlocked": "󰪛 ",
+    },
+    "interval": 1,
+  },
+  "custom/pacman": {
+    "exec": "~/.config/waybar/custom/pacman.sh",
+    "on-click": "hyprctl dispatch exec 'kitty -e paru -Syu; pkill -SIGRTMIN+8 waybar'",
+    "return-type": "json",
+    "format": "  {} {icon}",
+    "hide-empty-text": true,
+    "format-icons": {
+      "pending": "",
+    },
+    "interval": 3600,
+    "signal": 8,
+  },
+  "pulseaudio": {
+    "format": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "  {volume}% ",
+    "format-source-muted": "  ",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""],
+    },
+    "on-click": "pavucontrol",
+    "tooltip": false,
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "on-click": "plasma-systemmonitor",
+  },
+  "memory": {
+    "format": "{}% ",
+    "on-click": "plasma-systemmonitor",
+  },
+  "bluetooth": {
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
+    "format-on": "󰂯",
+    "format-connected": "",
+  },
+  "network": {
+    "format": "{icon}",
+    "tooltip-format": "{ifname} {ipaddr}",
+    "format-icons": {
+      "ethernet": "󰈀 ",
+      "disconnected": "󰲜 ",
+    },
+  },
+  "custom/swaync": {
+    "format": "{icon}",
+    "return-type": "json",
+    "exec": "~/.config/waybar/custom/swaync.sh",
+    "interval": 1,
+    "format-icons": {
+      "inhibited": "",
+      "unread": "",
+      "read": "",
+    },
+    "on-click": "swaync-client -t",
+    "on-click-right": "swaync-client -C",
+  },
+  "tray": {
+    "icon-size": 18,
+    "show-passive-items": true,
+    "spacing": 10,
+  },
+  "custom/power": {
+    "format": "⏻ ",
+    "on-click": "wlogout",
+  },
+}

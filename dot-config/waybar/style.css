@@ -1,0 +1,207 @@
+@import "mocha.css";
+
+* {
+  font-family: Meslo LGS NF;
+  font-size: 15px;
+  min-height: 0;
+}
+
+#waybar {
+  background: transparent;
+  color: @text;
+  margin: 10px 5px;
+  border-radius: 5rem;
+}
+
+#workspaces,
+#window,
+#clock,
+#pulseaudio,
+#cpu,
+#memory,
+#bluetooth,
+#keyboard-state,
+#custom-capslock,
+#mpris,
+#network,
+#custom-privacy,
+#tray,
+#custom-power,
+#custom-pacman,
+#custom-swaync,
+#custom-weather {
+  margin: 13px 0px;
+  border-radius: 1rem;
+  padding: 0rem 1rem;
+  background-color: @base;
+  border: 0.5px solid @overlay0;
+}
+
+#clock {
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+  color: @crust;
+  background-color: @sapphire;
+  border-color: @sapphire;
+  padding: 0rem 1rem;
+}
+
+tooltip {
+  background-color: @mantle;
+  opacity: 0.9;
+  border: 1px solid @teal;
+}
+
+#window {
+  color: white;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+#workspaces {
+  padding: 0rem;
+}
+
+#workspaces button {
+  color: @red;
+  border-radius: 1rem;
+}
+
+#workspaces button.empty {
+  color: @red;
+}
+
+#workspaces button.visible {
+  color: @yellow;
+}
+
+#workspaces button.active {
+  color: @green;
+}
+
+#workspaces button:hover {
+  color: @blue;
+}
+
+#mpris {
+  margin-right: 0.5rem;
+}
+
+#mpris.playing {
+  background-color: @teal;
+  color: @crust;
+}
+
+#custom-privacy {
+  color: @red;
+  border-color: @red;
+  border-width: 2px;
+  margin-left: 5px;
+}
+
+#custom-capslock {
+  color: @pink;
+}
+
+#custom-capslock.unlocked {
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+#custom-pacman {
+  color: #1793d1;
+  margin-left: 0.5rem;
+  padding: 0px 15px 0px 10px;
+  border-color: #1793d1;
+}
+
+#pulseaudio {
+  color: @yellow;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0rem;
+  border-style: solid;
+  border-color: @overlay0;
+  border-width: 0.5px 0px 0.5px 0.5px;
+}
+
+#cpu,
+#memory,
+#bluetooth,
+#network,
+#tray,
+#custom-power,
+#custom-swaync {
+  border-radius: 0;
+  border-style: solid;
+  border-color: @overlay0;
+  border-width: 0.5px 0px 0.5px 0px;
+}
+
+#cpu {
+  padding: 0px 10px 0px 0px;
+  color: @green;
+}
+
+#memory {
+  padding: 0px 10px 0px 5px;
+  color: @peach;
+}
+
+#bluetooth {
+  padding: 0px 5px 0px 5px;
+  font-size: 16px;
+}
+
+#bluetooth.disabled,
+#bluetooth.off {
+  color: @red;
+}
+
+#bluetooth.on {
+  color: white;
+}
+
+#bluetooth.connected {
+  color: @blue;
+}
+
+#network {
+  color: white;
+  padding: 0px 0px 0px 7px;
+}
+
+#network.disconnected {
+  color: @red;
+}
+
+#custom-swaync {
+  color: white;
+  padding: 0rem 0.5rem;
+}
+
+#custom-swaync.unread {
+  color: @red;
+}
+
+#tray {
+  padding: 0rem 0.5rem;
+}
+
+#custom-power {
+  color: white;
+  border-radius: 0rem 1rem 1rem 0rem;
+  padding: 0px 10px 0px 10px;
+  margin-right: 1rem;
+}
+
+#custom-power:hover {
+  background-color: @maroon;
+  color: @crust;
+}
