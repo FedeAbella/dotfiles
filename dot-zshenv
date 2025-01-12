@@ -1,0 +1,33 @@
+# XDG envs
+export XDG_CONFIG_HOME="$HOME"/.config
+export XDG_DATA_HOME="$HOME"/.local/share
+export XDG_STATE_HOME="$HOME"/.local/state
+export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
+
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc:"$XDG_CONFIG_HOME"/gtk-2.0/gtkrc.mine
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export GOPATH="$XDG_CONFIG_HOME"/go
+export PYENV_ROOT="$XDG_CONFIG_HOME"/pyenv
+export NVM_DIR="$XDG_CONFIG_HOME"/nvm
+export PYTHON_HISTORY="$XDG_CONFIG_HOME"/python_history
+export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME"/ripgrep/ripgreprc
+
+export TERM=kitty
+export EDITOR=nvim
+export LESS="-RF"
+
+export SFDX_DISABLE_DNS_CHECK=true
+export SF_USE_GENERIC_UNIX_KEYCHAIN=true
+
+export ZVM_VI_EDITOR=$EDITOR
+export ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
+
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
+
+# PATH
+PATH=$HOME/.local/bin:$PATH
+PATH=$HOME/.local/scripts:$PATH
+[[ ! -d $JAVA_HOME ]] || PATH=$PATH:$JAVA_HOME/bin
+[[ ! -d $HOME/.local/bin/Postman ]] || PATH=$PATH:$HOME/.local/bin/Postman
+[[ ! -d /usr/local/go ]] || PATH=$PATH:/usr/local/go/bin
+[[ ! -d $GOPATH/bin ]] || PATH=$PATH:$GOPATH/bin

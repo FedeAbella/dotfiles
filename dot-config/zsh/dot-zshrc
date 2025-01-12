@@ -1,0 +1,35 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+HISTSIZE=1000
+SAVEHIST=2000
+HIST_STAMPS="yyyy-mm-dd"
+[ -d "$XDG_STATE_HOME"/zsh ] || mkdir "$XDG_STATE_HOME"/zsh
+HISTFILE="$XDG_STATE_HOME"/zsh/history
+
+setopt autocd beep nonomatch
+unsetopt extendedglob
+bindkey -e
+
+export ZSH="$XDG_CONFIG_HOME"/oh-my-zsh
+ZSH_THEME="powerlevel10k/powerlevel10k"
+zstyle ':omz:update' mode auto      # update automatically without asking
+plugins=(zsh-autosuggestions zsh-vi-mode colored-man-pages command-not-found)
+source "$ZSH"/oh-my-zsh.sh
+
+# User configuration
+[[ ! -f "$XDG_CONFIG_HOME"/zsh/dirs.zsh ]] || source "$XDG_CONFIG_HOME"/zsh/dirs.zsh
+[[ ! -f "$XDG_CONFIG_HOME"/zsh/aliases.zsh ]] || source "$XDG_CONFIG_HOME"/zsh/aliases.zsh
+[[ ! -f "$XDG_CONFIG_HOME"/zsh/apps.zsh ]] || source "$XDG_CONFIG_HOME"/zsh/apps.zsh
+
+# p10k config
+[[ ! -f "$XDG_CONFIG_HOME"/p10k/p10k.zsh ]] || source "$XDG_CONFIG_HOME"/p10k/p10k.zsh
+
+# Source the syntax highlighting plugin (THIS MUST BE THE LAST SOURCE)
+source "$XDG_CONFIG_HOME"/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+

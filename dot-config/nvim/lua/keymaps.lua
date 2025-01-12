@@ -6,9 +6,6 @@ commander.add({
     cmd = commander.show,
     keys = { "n", "<leader>k" },
   },
-  -- Buffers
-  { keys = { "n", "<C-h>" }, cmd = vim.cmd.bnext, desc = "Buffers: Next" },
-  { keys = { "n", "<C-l>" }, cmd = vim.cmd.bprevious, desc = "Buffers: Previous" },
 
   -- Terminal
   { keys = { "t", "<esc>" }, cmd = [[<C-\><C-n>]], desc = "Terminal: Quit", show = false },
@@ -87,8 +84,8 @@ commander.add({
 
   -- Editing
   { keys = { "n", "<leader>w" }, cmd = ":w<cr>", desc = "Write file" },
-  { keys = { "v", "<C-j>" }, cmd = ":m '>+1<cr>gv=gv", desc = "Move selection up" },
-  { keys = { "v", "<C-k>" }, cmd = ":m '<-2<cr>gv=gv", desc = "Move selection down" },
+  { keys = { "v", "<M-j>" }, cmd = ":m '>+1<cr>gv=gv", desc = "Move selection up" },
+  { keys = { "v", "<M-k>" }, cmd = ":m '<-2<cr>gv=gv", desc = "Move selection down" },
   { keys = { "x", "<leader>p" }, cmd = '"_dP', desc = "Paste, but don't replace register" },
   { keys = { "n", "<leader>y" }, cmd = '"+y', desc = "Yank into clipboard" },
   { keys = { "v", "<leader>y" }, cmd = '"+y', desc = "Yank into clipboard" },

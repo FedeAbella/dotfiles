@@ -24,8 +24,8 @@ return {
         layout_strategy = "vertical",
         mappings = {
           i = {
-            ["<C-k>"] = actions.move_selection_previous,
-            ["<C-j>"] = actions.move_selection_next,
+            ["<M-k>"] = actions.move_selection_previous,
+            ["<M-j>"] = actions.move_selection_next,
           },
         },
         vimgrep_arguments = {
