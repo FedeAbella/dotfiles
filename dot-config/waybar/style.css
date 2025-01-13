@@ -64,7 +64,7 @@ window#waybar.empty #window {
 }
 
 #workspaces {
-  padding: 0rem;
+  padding: 0rem 0.5rem;
 }
 
 #workspaces button {
