@@ -52,7 +52,11 @@
     "format": "{}",
   },
   "mpris": {
-    "ignored-players": ["firefox", "plasma-browser-integration"],
+    "ignored-players": [
+      "firefox",
+      "plasma-browser-integration",
+      "plasma-browser-integration-3862",
+    ],
     "format": "{status_icon} {dynamic}",
     "status-icons": {
       "playing": " ",
