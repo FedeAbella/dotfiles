@@ -20,7 +20,7 @@
   "transition-time": 200,
   "hide-on-clear": true,
   "hide-on-action": true,
-  "fit-to-screen": false,
+  "fit-to-screen": true,
   "relative-timestamps": true,
   "control-center-width": 500,
   "control-center-height": 500,
