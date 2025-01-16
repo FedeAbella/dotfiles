@@ -26,6 +26,9 @@ return {
       hover = {
         enabled = true,
         opts = {
+          size = {
+            width = 70,
+          },
           border = {
             style = "rounded",
           },
@@ -34,6 +37,9 @@ return {
       signature = {
         enabled = true,
         opts = {
+          size = {
+            width = 70,
+          },
           border = {
             style = "rounded",
           },
