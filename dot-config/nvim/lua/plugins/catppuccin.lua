@@ -6,6 +6,7 @@ return {
     lazy = false,
     opts = {
       flavour = "mocha",
+      transparent_background = true,
       dim_inactive = {
         enabled = true,
       },
