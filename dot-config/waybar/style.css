@@ -89,12 +89,27 @@ window#waybar.empty #window {
 }
 
 #mpris {
-  margin-right: 0.5rem;
+  background-color: transparent;
+  border-color: transparent;
+  margin-left: 0.5rem;
 }
 
 #mpris.playing {
   background-color: @teal;
   color: @crust;
+  border: 0.5px solid @overlay0;
+}
+
+#mpris.paused {
+  background-color: @base;
+  color: @crust;
+  border: 0.5px solid @overlay0;
+}
+
+#mpris.stopped {
+  background-color: @base;
+  color: @crust;
+  border: 0.5px solid @overlay0;
 }
 
 #custom-privacy {
