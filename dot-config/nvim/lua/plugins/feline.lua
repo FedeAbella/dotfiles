@@ -21,7 +21,7 @@ return {
       },
       sett = {
         show_modified = true,
-        bkg = colors.base,
+        bkg = "NONE",
         extras = colors.subtext0,
       },
       view = {
@@ -67,12 +67,12 @@ return {
         str = " 󰢎 ",
         hl = {
           fg = "#009ddc",
-          bg = colors.base,
+          bg = "NONE",
         },
       },
       hl = {
         fg = colors.subtext0,
-        bg = colors.base,
+        bg = "NONE",
       },
       truncate_hide = true,
     }
