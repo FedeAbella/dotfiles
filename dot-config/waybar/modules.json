@@ -73,6 +73,14 @@
     },
     "interval": 1
   },
+  "custom/drives": {
+    "exec": "~/.config/waybar/custom/drives.sh",
+    "return-type": "json",
+    "format": "󱊞   {}",
+    "hide-empty-text": true,
+    "interval": 5,
+    "tooltip": true
+  },
   "custom/pacman": {
     "exec": "~/.config/waybar/custom/pacman.sh",
     "on-click": "hyprctl dispatch exec 'kitty -e paru -Syu; pkill -SIGRTMIN+8 waybar'",
