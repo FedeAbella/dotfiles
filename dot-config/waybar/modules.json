@@ -81,6 +81,13 @@
     "interval": 5,
     "tooltip": true
   },
+  "custom/dotfiles": {
+    "exec": "~/.config/waybar/custom/dotfiles.sh",
+    "format": "{}",
+    "hide-empty-text": true,
+    "interval": 60,
+    "tooltip": false
+  },
   "custom/pacman": {
     "exec": "~/.config/waybar/custom/pacman.sh",
     "on-click": "hyprctl dispatch exec 'kitty -e paru -Syu; pkill -SIGRTMIN+8 waybar'",

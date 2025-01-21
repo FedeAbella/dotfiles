@@ -11,6 +11,7 @@
       "custom/capslock",
       "custom/privacy",
       "custom/pacman",
+      "custom/dotfiles",
       "custom/drives",
       "pulseaudio",
       "cpu",
@@ -33,6 +34,7 @@
     "modules-right": [
       "custom/capslock",
       "custom/privacy",
+      "custom/dotfiles",
       "custom/drives",
       "pulseaudio",
       "cpu",

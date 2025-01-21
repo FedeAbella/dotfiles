@@ -30,7 +30,8 @@
 #custom-pacman,
 #custom-swaync,
 #custom-weather,
-#custom-drives {
+#custom-drives,
+#custom-dotfiles {
   margin: 13px 0px;
   border-radius: 1rem;
   padding: 0rem 1rem;
@@ -135,6 +136,11 @@ window#waybar.empty #window {
   margin-left: 0.5rem;
   padding: 0px 15px 0px 10px;
   border-color: #1793d1;
+}
+
+#custom-dotfiles {
+  color: @sky;
+  border-color: @sky;
 }
 
 #custom-drives {
