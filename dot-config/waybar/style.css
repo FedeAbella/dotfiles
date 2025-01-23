@@ -141,6 +141,7 @@ window#waybar.empty #window {
 #custom-dotfiles {
   color: @sky;
   border-color: @sky;
+  margin-left: 0.5rem;
 }
 
 #custom-drives {
