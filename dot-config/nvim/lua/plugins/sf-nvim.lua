@@ -3,7 +3,7 @@ return {
   name = "sf.nvim",
   branch = "main",
   dev = false,
-  -- dir = "~/coding/sf.nvim",
+  -- dir = "~/coding/nvim/sf",
   lazy = true,
   event = "VeryLazy",
   cond = function()
@@ -154,6 +154,11 @@ return {
       keys = { "n", "<leader>sta" },
       cmd = [[<cmd>lua require'sf'.run_local_tests()<cr>]],
       desc = "Salesforce: Run all Local Tests",
+    },
+    {
+      keys = { "v", "<leader>svq" },
+      cmd = [[<cmd>lua require'sf'.run_highlighted_soql()<cr>]],
+      desc = "Salesforce: Run Highlighted Query",
     },
   },
 }
