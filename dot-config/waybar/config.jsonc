@@ -5,7 +5,8 @@
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     // Choose the order of the modules
-    "modules-left": ["clock", "custom/weather", "mpris"],
+    //"modules-left": ["clock", "custom/weather", "mpris"],
+    "modules-left": ["clock", "custom/weather"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": [
       "custom/capslock",
