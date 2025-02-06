@@ -38,6 +38,7 @@ vim.filetype.add({
   },
   pattern = {
     [".*/hypr/.*%.conf"] = "hyprlang",
+    ["apex-.*%.log"] = "sflog",
   },
 })
 
