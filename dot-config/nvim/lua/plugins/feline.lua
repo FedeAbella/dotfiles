@@ -1,5 +1,6 @@
 return {
   "freddiehaddad/feline.nvim",
+  enabled = false,
   lazy = true,
   event = "VimEnter",
   priority = 800,
