@@ -1,0 +1,9 @@
+@import "colors.css";
+popover contents {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: none;
+}
+@import 'colors.css';
