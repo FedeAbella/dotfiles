@@ -13,8 +13,8 @@ if command -v fzf >/dev/null; then
     export FZF_DEFAULT_COMMAND='fd --hidden --strip-cwd-prefix --exclude .git'
 
     # zsh shell integration
-    source /usr/share/fzf/completion.zsh
-    source /usr/share/fzf/key-bindings.zsh
+    [[ ! -f /usr/share/fzf/completion.zsh ]] || source /usr/share/fzf/completion.zsh
+    [[ ! -f /usr/share/fzf/key-bindings.zsh ]] || source /usr/share/fzf/key-bindings.zsh
     # run the source after zsh-vi-mode, otherwise the keybindings are overwritten
     zvm_after_init_commands+=('source <(fzf --zsh)')
 fi
