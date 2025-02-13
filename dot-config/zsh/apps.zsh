@@ -16,7 +16,7 @@ if command -v fzf >/dev/null; then
     [[ ! -f /usr/share/fzf/completion.zsh ]] || source /usr/share/fzf/completion.zsh
     [[ ! -f /usr/share/fzf/key-bindings.zsh ]] || source /usr/share/fzf/key-bindings.zsh
     # run the source after zsh-vi-mode, otherwise the keybindings are overwritten
-    zvm_after_init_commands+=('source <(fzf --zsh)')
+    [[ ! -f /usr/share/fzf/completion.zsh ]] || zvm_after_init_commands+=('source <(fzf --zsh)')
 fi
 
 # nvm
