@@ -1,5 +1,8 @@
 #Zsh aliases
 
+# nvim in Ubuntu
+[[ $(command -v nvim) ]] || [[ ! -d $HOME/.local/bin/nvim-linux64/bin ]] || alias nvim='$HOME/.local/bin/nvim-linux64/bin/nvim'
+
 # Edit the zsh shell configuration
 alias zshconfig='nvim -O $XDG_CONFIG_HOME/zsh/.zshrc $XDG_CONFIG_HOME/zsh/aliases.zsh $XDG_CONFIG_HOME/zsh/dirs.zsh $XDG_CONFIG_HOME/zsh/apps.zsh'
 
