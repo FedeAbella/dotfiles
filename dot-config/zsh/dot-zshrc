@@ -34,3 +34,5 @@ source "$XDG_CONFIG_HOME"/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 [[ ! -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] || source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [[ ! -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] || source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+
+. "$HOME/.local/share/../bin/env"
