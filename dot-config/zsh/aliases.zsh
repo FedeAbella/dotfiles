@@ -33,3 +33,4 @@ alias hyprconfig='nvim $HOME/.config/hypr/hyprland.conf'
 # Script aliases
 alias gb='bash ~/.local/scripts/git-branches.sh'
 alias gnb='bash ~/.local/scripts/git-newbranch.sh'
+alias grb='bash ~/.local/scripts/git-rebasefrom.sh'
