@@ -27,7 +27,7 @@
     "include": ["~/.config/waybar/modules.json"],
   },
   {
-    "output": ["HDMI-A-1"],
+    "output": ["HDMI-A-1", "DP-1"],
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     // Choose the order of the modules
