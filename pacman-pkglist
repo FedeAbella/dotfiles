@@ -20,6 +20,9 @@ cups
 cups-pdf
 discord
 discover
+docker
+docker-buildx
+docker-compose
 dolphin
 dolphin-plugins
 dragon
@@ -34,6 +37,7 @@ flameshot
 flatpak-kcm
 fzf
 gamemode
+gamescope
 gimp
 git
 git-delta
