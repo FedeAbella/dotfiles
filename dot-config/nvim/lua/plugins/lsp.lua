@@ -86,6 +86,7 @@ return {
           { name = "luasnip" },
           { name = "render-markdown" },
           { name = "buffer" },
+          { name = "emoji" },
         }),
         mapping = cmp.mapping.preset.insert({
           ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
