@@ -112,6 +112,7 @@ layer-shell-qt
 lazygit
 less
 lib32-gamemode
+lib32-vulkan-radeon
 libkscreen
 libksysguard
 libplasma
@@ -206,6 +207,7 @@ vulkan-radeon
 wacomtablet
 waybar
 webapp-manager-git
+webkit2gtk-4.1
 wget
 wl-clipboard
 wlogout
