@@ -1,0 +1,10 @@
+. "$HOME/.local/share/../bin/env"
+
+# PATH
+PATH=$HOME/.local/bin:$PATH
+PATH=$HOME/.local/scripts:$PATH
+[[ ! -d $JAVA_HOME ]] || PATH=$PATH:$JAVA_HOME/bin
+[[ ! -d $HOME/.local/bin/Postman ]] || PATH=$PATH:$HOME/.local/bin/Postman
+[[ ! -d /usr/local/go ]] || PATH=$PATH:/usr/local/go/bin
+[[ ! -d $GOPATH/bin ]] || PATH=$PATH:$GOPATH/bin
+[[ ! -d $HOME/.local/bin/nvim-linux64/bin ]] || PATH=$PATH:$HOME/.local/bin/nvim-linux64/bin

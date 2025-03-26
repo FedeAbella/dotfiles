@@ -24,6 +24,8 @@ export ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
 
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
 
+export BROWSER="/opt/Citrix/ICAClient/wfica:brave:chromium-browser:firefox"
+
 # PATH
 PATH=$HOME/.local/bin:$PATH
 PATH=$HOME/.local/scripts:$PATH
