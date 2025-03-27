@@ -165,7 +165,7 @@
     "spacing": 10
   },
   "custom/power": {
-    "format": "⏻ ",
+    "format": " ",
     "on-click": "wlogout"
   }
 }

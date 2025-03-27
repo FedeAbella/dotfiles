@@ -6,6 +6,7 @@ base-devel
 bat
 bluedevil
 bluez-utils
+brave-bin
 breeze
 breeze-gtk
 breeze-plymouth
@@ -35,6 +36,7 @@ filelight
 firefox
 flameshot
 flatpak-kcm
+fuse2
 fzf
 gamemode
 gamescope
@@ -164,6 +166,7 @@ plasma-workspace-wallpapers
 plasma5support
 plymouth-kcm
 polkit-kde-agent
+postgresql
 powerdevil
 print-manager
 proton-pass-bin
