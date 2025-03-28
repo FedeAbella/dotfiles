@@ -80,12 +80,6 @@ return {
             },
           }),
           null_ls.builtins.formatting.isort,
-          null_ls.builtins.formatting.mdformat.with({
-            extra_args = {
-              "--wrap",
-              80,
-            },
-          }),
           null_ls.builtins.formatting.prettier.with({
             timeout = 10000,
             extra_filetypes = { "apex" },
