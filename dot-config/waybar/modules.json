@@ -126,11 +126,11 @@
   },
   "cpu": {
     "format": "{usage}% ",
-    "on-click": "plasma-systemmonitor"
+    "on-click": "kitty -e btop"
   },
   "memory": {
     "format": "{}% ",
-    "on-click": "plasma-systemmonitor"
+    "on-click": "kitty -e btop"
   },
   "bluetooth": {
     "format-disabled": "󰂲",
