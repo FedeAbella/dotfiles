@@ -6,7 +6,7 @@ case $user in
     fede)
         hyprctl dispatch exec "[workspace 7 silent] flatpak run com.rtosta.zapzap"
         hyprctl dispatch exec "[workspace 7 silent] discord"
-        /usr/bin/steam-runtime -silent &
+        steam -silent &
         sleep 3
         hyprctl dispatch exec "[workspace 1] firefox"
         ;;

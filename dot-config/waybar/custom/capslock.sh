@@ -1,6 +1,6 @@
 #!/bin/bash
 
-capslock=$(cat /sys/class/leds/input12::capslock/brightness)
+capslock=$(cat /sys/class/leds/input10::capslock/brightness)
 
 if [[ "${capslock}" == "1" ]]; then
     echo '{"text": "locked", "alt": "locked", "class": "locked"}'
