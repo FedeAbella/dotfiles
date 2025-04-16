@@ -12,9 +12,33 @@ export NVM_DIR="$XDG_CONFIG_HOME"/nvm
 export PYTHON_HISTORY="$XDG_CONFIG_HOME"/python_history
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME"/ripgrep/ripgreprc
 
+# nnn config envs
+BLK="03"
+CHR="03"
+DIR="04"
+EXE="02"
+REG="07"
+HARDLINK="05"
+SYMLINK="05"
+MISSING="08"
+ORPHAN="01"
+FIFO="06"
+SOCK="03"
+UNKNOWN="01"
+
+# Export Context Colors
+export NNN_COLORS="#04020301;4231"
+
+# Finally Export the set file colors ( Both options require this)
+export NNN_FCOLORS="$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SOCK$UNKNOWN"
+
+export NNN_OPTS="e"
+export NNN_TRASH=trash
+
 export TERM=kitty
 export EDITOR=nvim
-export LESS="-RF"
+export VISUAL=nvim
+# export LESS="-RF"
 
 export SFDX_DISABLE_DNS_CHECK=true
 export SF_USE_GENERIC_UNIX_KEYCHAIN=true
