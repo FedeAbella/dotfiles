@@ -10,3 +10,6 @@ require("colorscheme")
 
 -- add custom keymaps
 require("keymaps")
+
+-- create custom commands
+require("commands")
