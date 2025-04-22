@@ -40,6 +40,7 @@ return {
           -- Diagnostics
           null_ls.builtins.diagnostics.actionlint, -- Github actions linter
           null_ls.builtins.diagnostics.gitlint, -- Git commit linter
+          null_ls.builtins.diagnostics.golangci_lint,
           null_ls.builtins.diagnostics.markdownlint,
           null_ls.builtins.diagnostics.pmd.with({
             -- This requires having set up filetypes for apex and assigning file extensions
@@ -79,6 +80,8 @@ return {
               79,
             },
           }),
+          null_ls.builtins.formatting.gofmt,
+          null_ls.builtins.formatting.goimports_reviser,
           null_ls.builtins.formatting.isort,
           null_ls.builtins.formatting.prettier.with({
             timeout = 10000,

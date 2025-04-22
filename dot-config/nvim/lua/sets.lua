@@ -11,6 +11,7 @@ vim.o.cursorlineopt = "both" -- Highlight both cursor line and line number
 -- Formatting
 vim.o.expandtab = true -- Use spaces when inserting tabs
 vim.o.shiftwidth = 4 -- Number of spaces inserted instead of tabs
+vim.o.tabstop = 4 -- Length of actual tab character
 vim.o.smartindent = true -- Use smart indentation
 vim.o.syntax = "ON" -- Set syntax highlighting according to filetype
 
