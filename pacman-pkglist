@@ -83,6 +83,7 @@ lvm2
 lxqt-config
 man-db
 mangohud
+ncdu
 neovim
 network-manager-applet
 networkmanager
@@ -95,6 +96,7 @@ okular
 openrazer-daemon
 otf-font-awesome
 pacman-contrib
+pandoc-cli
 papirus-folders-catppuccin-git
 papirus-icon-theme
 paru
@@ -131,6 +133,7 @@ svgpart
 swaync
 system-config-printer
 teams-for-linux
+tk
 tldr
 trash-cli
 tree

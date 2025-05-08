@@ -136,7 +136,6 @@ return {
 
       require("mason-lspconfig").setup({
         ensure_installed = {
-          "apex_ls",
           "bashls",
           "cssls",
           "lwc_ls",
