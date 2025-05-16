@@ -11,7 +11,7 @@ case $user in
         hyprctl dispatch exec "[workspace 1] firefox"
         ;;
     attentis)
-        hyprctl dispatch exec "[workspace 7 silent] teams-for-linux"
+        hyprctl dispatch exec "[workspace 7 silent] teams-for-linux --enable-features=UseOzonePlatform --ozone-platform=wayland"
         hyprctl dispatch exec "[workspace 4 silent] chromium --profile-directory='Profile 1'"
         hyprctl dispatch exec "[workspace 2 silent] kitty"
         hyprctl dispatch exec "[workspace 9 silent] firefox"
