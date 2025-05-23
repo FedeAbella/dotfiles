@@ -31,6 +31,7 @@ alias pacman-cleanup='sudo pacman -Qdtq | sudo pacman -Rns -'
 alias hyprconfig='nvim $HOME/.config/hypr/hyprland.conf'
 
 # Script aliases
-alias gb='bash ~/.local/scripts/git-branches.sh'
-alias gnb='bash ~/.local/scripts/git-newbranch.sh'
-alias grb='bash ~/.local/scripts/git-rebasefrom.sh'
+alias gb='bash ~/.local/scripts/git/branches.sh'
+alias gnb='bash ~/.local/scripts/git/newbranch.sh'
+alias grb='bash ~/.local/scripts/git/rebasefrom.sh'
+alias gsp='bash ~/.local/scripts/git/switchandpull.sh'
