@@ -3,6 +3,7 @@ ark
 base
 base-devel
 bat
+bind
 bluedevil
 bluez-utils
 btop
@@ -12,6 +13,7 @@ catppuccin-gtk-theme-mocha
 chromium
 clipse
 cpio
+cronie
 cups
 cups-pdf
 discord
@@ -126,7 +128,6 @@ rose-pine-hyprcursor
 rsync
 satty
 sddm
-skanpage
 snap-pac
 snapper
 steam
