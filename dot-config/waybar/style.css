@@ -30,6 +30,7 @@
 #custom-pacman,
 #custom-swaync,
 #custom-weather,
+#custom-sunset,
 #custom-drives,
 #custom-dotfiles {
   margin: 13px 0px;
@@ -165,7 +166,8 @@ window#waybar.empty #window {
 #network,
 #tray,
 #custom-power,
-#custom-swaync {
+#custom-swaync,
+#custom-sunset {
   border-radius: 0;
   border-style: solid;
   border-color: @overlay0;
@@ -207,6 +209,16 @@ window#waybar.empty #window {
 
 #network.disconnected {
   color: @red;
+}
+
+#custom-sunset.disabled {
+  color: white;
+  padding: 0rem 0.5rem;
+}
+
+#custom-sunset.enabled {
+  color: @maroon;
+  padding: 0rem 0.5rem;
 }
 
 #custom-swaync {

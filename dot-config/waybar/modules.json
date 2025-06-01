@@ -164,6 +164,17 @@
     "show-passive-items": true,
     "spacing": 10
   },
+  "custom/sunset": {
+    "format": "{icon}",
+    "return-type": "json",
+    "exec": "~/.config/waybar/custom/hyprsunset-query.sh",
+    "interval": 1,
+    "format-icons": {
+      "disabled": "",
+      "enabled": ""
+    },
+    "on-click": "~/.config/waybar/custom/hyprsunset.sh"
+  },
   "custom/power": {
     "format": " ",
     "on-click": "wlogout"
