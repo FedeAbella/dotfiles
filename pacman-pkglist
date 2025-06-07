@@ -68,6 +68,7 @@ kamoso
 kate
 kcalc
 kcharselect
+kcolorchooser
 kdegraphics-thumbnailers
 kdenetwork-filesharing
 kitty
@@ -105,6 +106,7 @@ papirus-icon-theme
 paru
 paru-debug
 pavucontrol
+perl-image-exiftool
 pipewire-alsa
 plasma-activities
 polkit-kde-agent
@@ -155,6 +157,7 @@ xdg-desktop-portal-hyprland
 xf86-video-amdgpu
 xorg-fonts-100dpi
 xorg-xwayland
+xournalpp
 yq
 zip
 zoxide
