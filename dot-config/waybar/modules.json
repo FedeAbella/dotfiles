@@ -95,7 +95,7 @@
   },
   "custom/pacman": {
     "exec": "~/scripts/waybar/pacman.sh",
-    "on-click": "hyprctl dispatch exec 'kitty -e paru -Syu; pkill -SIGRTMIN+8 waybar'",
+    "on-click": "~/scripts/arch/update.sh",
     "return-type": "json",
     "format": "  {} {icon}",
     "hide-empty-text": true,
