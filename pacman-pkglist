@@ -94,6 +94,7 @@ network-manager-applet
 networkmanager
 networkmanager-openvpn
 nm-connection-editor
+noto-fonts-cjk
 nss-mdns
 nwg-look
 okular
@@ -158,6 +159,7 @@ xf86-video-amdgpu
 xorg-fonts-100dpi
 xorg-xwayland
 xournalpp
+xpadneo-dkms-git
 yq
 zip
 zoxide

@@ -1,7 +1,7 @@
 #Zsh aliases
 
 # Edit the zsh shell configuration
-alias zshconfig='nvim -O $XDG_CONFIG_HOME/zsh/.zshrc $XDG_CONFIG_HOME/zsh/aliases.zsh $XDG_CONFIG_HOME/zsh/dirs.zsh $XDG_CONFIG_HOME/zsh/apps.zsh'
+alias zshconfig='nvim -O $XDG_CONFIG_HOME/zsh/.zshrc $XDG_CONFIG_HOME/zsh/aliases.zsh $XDG_CONFIG_HOME/zsh/apps.zsh'
 
 alias open='xdg-open'
 
@@ -27,11 +27,14 @@ alias pacman-cleanup='sudo pacman -Qdtq | sudo pacman -Rns -'
 ## hyprland
 alias hyprconfig='nvim $HOME/.config/hypr/hyprland.conf'
 
-# git
-alias gb='bash ~/.local/scripts/git/branches.sh'
-alias gnb='bash ~/.local/scripts/git/newbranch.sh'
-alias grb='bash ~/.local/scripts/git/rebasefrom.sh'
-alias gsp='bash ~/.local/scripts/git/switchandpull.sh'
-
 # nvim
 alias nv='nvim'
+
+# scripts
+## git
+if [[ -d "$HOME"/scripts ]]; then
+    alias gb='bash $HOME/scripts/git/branches.sh'
+    alias gnb='bash $HOME/scripts/git/newbranch.sh'
+    alias grb='bash $HOME/scripts/git/rebasefrom.sh'
+    alias gsp='bash $HOME/scripts/git/switchandpull.sh'
+fi

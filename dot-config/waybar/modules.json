@@ -27,7 +27,7 @@
   },
   "custom/weather": {
     "return-type": "json",
-    "exec": "~/.config/waybar/custom/weather.sh",
+    "exec": "~/scripts/waybar/weather.sh",
     "interval": 600,
     "format": "{}"
   },
@@ -64,12 +64,12 @@
   },
   "custom/privacy": {
     "format": "{}",
-    "exec": "~/.config/waybar/custom/privacy.sh",
+    "exec": "~/scripts/waybar/privacy.sh",
     "return-type": "json",
     "interval": 5
   },
   "custom/capslock": {
-    "exec": "~/.config/waybar/custom/capslock.sh",
+    "exec": "~/scripts/waybar/capslock.sh",
     "return-type": "json",
     "format": "{icon}",
     "format-icons": {
@@ -79,7 +79,7 @@
     "interval": 1
   },
   "custom/drives": {
-    "exec": "~/.config/waybar/custom/drives.sh",
+    "exec": "~/scripts/waybar/drives.sh",
     "return-type": "json",
     "format": "󱊞   {}",
     "hide-empty-text": true,
@@ -87,14 +87,14 @@
     "tooltip": true
   },
   "custom/dotfiles": {
-    "exec": "~/.config/waybar/custom/dotfiles.sh",
+    "exec": "~/scripts/waybar/dotfiles.sh",
     "format": "{}",
     "hide-empty-text": true,
     "interval": 60,
     "tooltip": false
   },
   "custom/pacman": {
-    "exec": "~/.config/waybar/custom/pacman.sh",
+    "exec": "~/scripts/waybar/pacman.sh",
     "on-click": "hyprctl dispatch exec 'kitty -e paru -Syu; pkill -SIGRTMIN+8 waybar'",
     "return-type": "json",
     "format": "  {} {icon}",
@@ -149,7 +149,7 @@
   "custom/swaync": {
     "format": "{icon}",
     "return-type": "json",
-    "exec": "~/.config/waybar/custom/swaync.sh",
+    "exec": "~/scripts/waybar/swaync.sh",
     "interval": 1,
     "format-icons": {
       "inhibited": "",
@@ -167,13 +167,13 @@
   "custom/sunset": {
     "format": "{icon}",
     "return-type": "json",
-    "exec": "~/.config/waybar/custom/hyprsunset-query.sh",
+    "exec": "~/scripts/waybar/hyprsunset.sh",
     "interval": 1,
     "format-icons": {
       "disabled": "",
       "enabled": ""
     },
-    "on-click": "~/.config/waybar/custom/hyprsunset.sh"
+    "on-click": "~/scripts/hypr/hyprsunset.sh"
   },
   "custom/power": {
     "format": " ",
