@@ -47,6 +47,7 @@ gtk4-layer-shell
 gtypist
 gwenview
 highlight
+htop
 hypridle
 hyprland
 hyprlock
@@ -95,6 +96,7 @@ networkmanager
 networkmanager-openvpn
 nm-connection-editor
 noto-fonts-cjk
+noto-fonts-emoji
 nss-mdns
 nwg-look
 okular
