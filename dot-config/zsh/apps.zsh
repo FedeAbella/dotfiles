@@ -26,6 +26,3 @@ fi
 #Pyenv
 command -v pyenv >/dev/null || export PATH="$PATH:$PYENV_ROOT/bin"
 command -v pyenv >/dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)"
-
-# Zoxide
-command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
