@@ -134,6 +134,9 @@ return {
         end,
       })
 
+      -- Apex LS is not supported by mason-lspconfig and nvim-lspconfig, so enable it manually
+      vim.lsp.enable("apex_ls")
+
       require("mason-lspconfig").setup({
         automatic_enable = true,
         ensure_installed = {
@@ -156,45 +159,6 @@ return {
           "yamlls",
         },
         automatic_installation = true,
-        handlers = {
-          function(server_name)
-            require("lspconfig")[server_name].setup({})
-          end,
-          apex_ls = function()
-            require("lspconfig").apex_ls.setup({
-              filetypes = { "apex" },
-            })
-          end,
-          pylsp = function()
-            require("lspconfig").pylsp.setup({
-              settings = {
-                pylsp = {
-                  plugins = {
-                    jedi_completion = {
-                      enabled = false,
-                      include_params = true,
-                    },
-                    rope_autoimport = {
-                      enabled = true,
-                    },
-                  },
-                },
-              },
-            })
-          end,
-          jedi_language_server = function()
-            require("lspconfig").jedi_language_server.setup({
-              init_options = {
-                diagnostics = {
-                  enable = false,
-                },
-              },
-              on_init = function(client)
-                client.server_capabilities.renameProvider = false
-              end,
-            })
-          end,
-        },
       })
 
       vim.diagnostic.config({
