@@ -44,7 +44,6 @@ grub
 grub-btrfs
 gsettings-qt
 gtk4-layer-shell
-gtypist
 gwenview
 highlight
 htop
@@ -56,7 +55,6 @@ hyprpicker
 hyprpolkitagent
 hyprshot
 hyprsunset
-hyprsysteminfo
 icaclient
 inkscape
 inotify-tools
@@ -108,6 +106,8 @@ papirus-folders-catppuccin-git
 papirus-icon-theme
 paru
 paru-debug
+pastel
+pastel-docs
 pavucontrol
 perl-image-exiftool
 pipewire-alsa
@@ -116,6 +116,7 @@ polkit-kde-agent
 postgresql
 proton-pass-bin
 proton-vpn-gtk-app
+psensor
 pyenv
 qt5-tools
 qt5-wayland
@@ -123,6 +124,7 @@ qt5ct
 qt6-wayland
 qt6ct
 ranger
+rasdaemon
 razergenie
 reflector
 ripgrep
@@ -150,7 +152,6 @@ ufw
 unzip
 vulkan-radeon
 waybar
-webapp-manager-git
 webkit2gtk-4.1
 wget
 wl-clipboard
@@ -163,6 +164,7 @@ xorg-xwayland
 xournalpp
 xpadneo-dkms-git
 yq
+zenpower3-dkms
 zip
 zsh
 zsh-syntax-highlighting
