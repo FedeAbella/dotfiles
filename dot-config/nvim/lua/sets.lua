@@ -23,6 +23,7 @@ vim.o.splitbelow = true -- Split to the bottom when using split
 vim.o.timeout = false -- Don't timeout when waiting for keystrokes
 vim.o.scrolloff = 8 -- Always keep at least 8 lines before and after cursor
 vim.o.guifont = "FiraCode Nerd Font"
+vim.o.diffopt = "vertical"
 
 -- Filetypes
 vim.filetype.add({

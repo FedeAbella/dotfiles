@@ -10,7 +10,7 @@ return {
   },
   commander = {
     {
-      keys = { "n", "[c" },
+      keys = { "n", "{c" },
       cmd = function()
         if vim.wo.diff then
           return "[c"
@@ -23,7 +23,7 @@ return {
       desc = "Git: Previous hunk",
     },
     {
-      keys = { "n", "]c" },
+      keys = { "n", "}c" },
       cmd = function()
         if vim.wo.diff then
           return "]c"
