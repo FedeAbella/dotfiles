@@ -1,0 +1,4 @@
+theme: "tokyo-night"
+animation: "full"
+focus:
+  on_response: "body"
