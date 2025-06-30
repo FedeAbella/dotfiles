@@ -1,7 +1,10 @@
 return {
   {
     "cameron-wags/rainbow_csv.nvim",
-    config = true,
+    config = function()
+      vim.g.rbql_with_headers = 1
+      require("rainbow_csv").setup()
+    end,
     ft = {
       "csv",
       "tsv",
