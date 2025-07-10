@@ -48,7 +48,9 @@ return {
       "Settings",
       "SharingCriteriaRule",
       "SharingOwnerRule",
+      "StandardValueSet",
       "StaticResource",
+      "ValidationRule",
     },
     term_config = {
       dimensions = {
