@@ -176,7 +176,7 @@
     "on-click": "~/scripts/hypr/hyprsunset.sh"
   },
   "custom/power": {
-    "format": " ",
+    "format": "󰤆 ",
     "on-click": "wlogout"
   }
 }
