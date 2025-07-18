@@ -10,6 +10,7 @@ btop
 btrfs-progs
 catppuccin-cursors-mocha
 catppuccin-gtk-theme-mocha
+celluloid
 chromium
 clipse
 cpio
@@ -22,9 +23,7 @@ docker-buildx
 docker-compose
 dolphin
 dolphin-plugins
-dragon
 efibootmgr
-elisa
 fastfetch
 firefox
 flameshot
@@ -147,6 +146,7 @@ trash-cli
 tree
 ttf-firacode-nerd
 ttf-meslo-nerd
+ttf-ms-win11-auto
 ufw
 unzip
 vulkan-radeon
