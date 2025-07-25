@@ -28,11 +28,12 @@ vim.o.diffopt = "vertical,filler"
 -- Filetypes
 vim.filetype.add({
   extension = {
-    cls = "apex",
     apex = "apex",
-    trigger = "apex",
+    cls = "apex",
+    component = "html",
     soql = "soql",
     sosl = "sosl",
+    trigger = "apex",
     zsh = "sh",
   },
   filename = {
