@@ -28,6 +28,7 @@ return {
       "CustomObject",
       "CustomPermission",
       "CustomTab",
+      "EmailTemplate",
       "ExperienceBundle",
       "ExternalCredential",
       "FlexiPage",
