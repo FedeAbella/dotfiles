@@ -24,6 +24,7 @@ docker-compose
 dolphin
 dolphin-plugins
 efibootmgr
+extra-cmake-modules
 fastfetch
 firefox
 flameshot
@@ -44,8 +45,10 @@ grub-btrfs
 gsettings-qt
 gtk4-layer-shell
 gwenview
+hdparm
 highlight
 htop
+hyprcap-git
 hypridle
 hyprland
 hyprlock
@@ -81,10 +84,12 @@ libreoffice-still
 linux
 linux-firmware
 lsd
+lshw
 lvm2
 lxqt-config
 man-db
 mangohud
+mediainfo
 ncdu
 neovim
 network-manager-applet
@@ -108,13 +113,13 @@ pastel
 pastel-docs
 pavucontrol
 perl-image-exiftool
+perl-rename
 pipewire-alsa
 plasma-activities
 polkit-kde-agent
 postgresql
 proton-pass-bin
 proton-vpn-gtk-app
-psensor
 pyenv
 qt5-tools
 qt5-wayland
@@ -132,6 +137,7 @@ rose-pine-hyprcursor
 rsync
 satty
 sddm
+smartmontools
 snap-pac
 snapper
 steam
@@ -163,6 +169,7 @@ xorg-xwayland
 xournalpp
 xpadneo-dkms-git
 yq
+yt-dlp
 zenpower3-dkms
 zip
 zsh
