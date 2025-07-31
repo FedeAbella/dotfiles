@@ -33,8 +33,8 @@ alias nv='nvim'
 # scripts
 ## git
 if [[ -d "$HOME"/scripts ]]; then
-    alias gl='. $HOME/scripts/git/prettylog.sh'
-    alias gh='. $HOME/scripts/git/gethash.sh'
+    alias gl='. $HOME/scripts/git/gethash.sh'
+    alias gpl='. $HOME/scripts/git/prettylog.sh'
     alias gri='. $HOME/scripts/git/rebaseinteractive.sh'
     alias gfup='. $HOME/scripts/git/fixup.sh'
     alias gb='bash $HOME/scripts/git/branches.sh'
