@@ -2,19 +2,19 @@
 
 # fzf
 if command -v fzf >/dev/null; then
-    alias whatalias='print -z -- $(alias | fzf | cut -d "=" -f 1)'
-    alias fzfb='fzf --preview="batcat --color=always --style=numbers --line-range=:500 {}"'
+    alias walias='print -z -- $(alias | fzf --no-preview | cut -d "=" -f 1)'
 
     export FZF_DEFAULT_OPTS=" \
     --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
     --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
     --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
     --multi"
-    export FZF_DEFAULT_COMMAND='fd --hidden --strip-cwd-prefix --exclude .git'
+    export FZF_CTRL_T_OPTS=" \
+    --walker-skip SteamLibrary,.steam,.git,node_modules \
+    --preview=\"bat --color=always --style=numbers --line-range=:500 {}\""
+    export FZF_ALT_C_OPTS="--walker-skip SteamLibrary,node_modules --walker dir,follow --preview 'tree -C {}'"
+    export FZF_COMPLETION_DIR_OPTS="--walker-skip SteamLibrary,.steam --preview 'tree -C {}'"
 
-    # zsh shell integration
-    [[ ! -f /usr/share/fzf/completion.zsh ]] || source /usr/share/fzf/completion.zsh
-    [[ ! -f /usr/share/fzf/key-bindings.zsh ]] || source /usr/share/fzf/key-bindings.zsh
     # run the source after zsh-vi-mode, otherwise the keybindings are overwritten
     [[ ! -f /usr/share/fzf/completion.zsh ]] || zvm_after_init_commands+=('source <(fzf --zsh)')
 fi
