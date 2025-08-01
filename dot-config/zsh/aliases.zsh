@@ -30,6 +30,10 @@ alias hyprconfig='nvim $HOME/.config/hypr/hyprland.conf'
 # nvim
 alias nv='nvim'
 
+# git
+alias gadd='git add .'
+alias gc='git commit'
+
 # scripts
 ## git
 if [[ -d "$HOME"/scripts ]]; then
