@@ -24,7 +24,6 @@ docker-compose
 dolphin
 dolphin-plugins
 efibootmgr
-extra-cmake-modules
 fastfetch
 firefox
 flameshot
@@ -83,6 +82,7 @@ libplasma
 libreoffice-still
 linux
 linux-firmware
+linux-headers
 lsd
 lshw
 lvm2
@@ -117,6 +117,7 @@ perl-rename
 pipewire-alsa
 plasma-activities
 polkit-kde-agent
+polychromatic
 postgresql
 proton-pass-bin
 proton-vpn-gtk-app
@@ -128,7 +129,6 @@ qt6-wayland
 qt6ct
 ranger
 rasdaemon
-razergenie
 reflector
 ripgrep
 rofi-wayland
