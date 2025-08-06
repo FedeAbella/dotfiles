@@ -20,7 +20,7 @@ frg() (
 
 ## git
 # Pretty list git branches with remote and description
-gb() (
+gbpl() (
     git_root=$(git rev-parse --show-toplevel 2>&1)
     [[ -d "$git_root" ]] || { echo "Not a git repository" >&2 && return 1; }
 
@@ -38,12 +38,7 @@ gb() (
         remote=$(git config branch."$clean_branch_name".remote)
         merge=$(git config branch."$clean_branch_name".merge | cut --delimiter="/" --fields=3-)
 
-        branch_col="${branch}"
-        if [[ "${branch::1}" != "*" ]]; then
-            # Add spaces to account for "* " at the start of current branch
-            branch_col="  ${branch_col}"
-        fi
-
+        branch_col="${branch//\*\ /}"
         remote_col=""
         if [[ -n "$remote" ]] && [[ -n "$merge" ]]; then
             remote_col="\e[1;34m[${remote}/${merge}]\e[0m"
@@ -88,6 +83,22 @@ gl() {
     glog "$1" |
         fzf --ansi --no-sort --reverse --preview="git show --color=always {1}" |
         sed -e "s/ .*//"
+}
+
+# Pretty list branches -> fzf (+ log preview)
+gb() {
+    [[ -d "$(git rev-parse --show-toplevel 2>&1)" ]] || { echo "Not a git repository" >&2 && exit 1; }
+
+    gbpl |
+        tail -n +2 |
+        fzf --no-sort \
+            --reverse \
+            --ansi \
+            --delimiter "[[:space:]][[:space:]]+" \
+            --preview 'git log --color=always --pretty="%C(red)%h%C(auto)%d%Creset %s %C(yellow)by %an %C(cyan)(%ar)%Creset" {1}' \
+            --preview-window '<80(down)' \
+            --bind 'enter:execute(git switch {1})+abort' \
+            --bind 'D:execute(sed -e "s/ .*//" {+f} | xargs git branch -D)+abort'
 }
 
 # Pull another branch and rebase current branch from that one
