@@ -76,18 +76,18 @@ gnb() {
     git switch "$1" && git pull && git switch -c "$2" && git branch --edit-description
 }
 
+# git pretty log
+glog() {
+    git log --color=always --pretty="%C(red)%h%C(auto)%d%Creset %s %C(yellow)by %an %C(cyan)(%ar)%Creset" ${1:"HEAD"}
+}
+
 # git prettified log -> fzf -> output hash
 gl() {
     [[ -d "$(git rev-parse --show-toplevel 2>&1)" ]] || { echo "Not a git repository" >&2 && return 1; }
 
-    git log --color=always --pretty="%C(red)%h%C(auto)%d%Creset %s %C(yellow)by %an %C(cyan)(%ar)%Creset" |
+    glog "$1" |
         fzf --ansi --no-sort --reverse --preview="git show --color=always {1}" |
         sed -e "s/ .*//"
-}
-
-# git pretty log
-glog() {
-    git log --color=always --pretty="%C(red)%h%C(auto)%d%Creset %s %C(yellow)by %an %C(cyan)(%ar)%Creset"
 }
 
 # Pull another branch and rebase current branch from that one
