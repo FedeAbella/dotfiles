@@ -90,6 +90,7 @@ lxqt-config
 man-db
 mangohud
 mediainfo
+mpd
 ncdu
 neovim
 network-manager-applet
@@ -131,6 +132,7 @@ ranger
 rasdaemon
 reflector
 ripgrep
+rmpc
 rofi-wayland
 rose-pine-cursor
 rose-pine-hyprcursor
