@@ -33,3 +33,4 @@ alias nv='nvim'
 # git
 alias gadd='git add .'
 alias gc='git commit'
+alias gca='git commit --amend'
