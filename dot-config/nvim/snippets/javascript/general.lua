@@ -1,29 +1,36 @@
 local ls = require("luasnip")
+local fmta = require("luasnip.extras.fmt").fmta
 local s = ls.snippet
-local t = ls.text_node
 local i = ls.insert_node
 
 return {
-  s({
-    trig = "console",
-    desc = "console.log",
-    docstring = "console.log() method",
-  }, {
-    t('console.log("'),
-    i(1, "describe"),
-    t(': ", '),
-    i(2, "var"),
-    t(");"),
-  }),
-  s({
-    trig = "jsonconsole",
-    desc = "console.log JSON stringified object",
-    docstring = { "console.log() method with", "JSON stringified variable" },
-  }, {
-    t('console.log("'),
-    i(1, "describe"),
-    t(': ", JSON.stringify('),
-    i(2, "var"),
-    t("));"),
-  }),
+  s(
+    {
+      trig = "console",
+      desc = "console.log",
+      docstring = "console.log() method",
+    },
+    fmta(
+      [[
+        console.log("<>: ", <>);
+      ]],
+      { i(1, "description"), i(2, "var") }
+    )
+  ),
+  s(
+    {
+      trig = "jsonconsole",
+      desc = "console.log JSON stringified object",
+      docstring = { "console.log() method with", "JSON stringified variable" },
+    },
+    fmta(
+      [[
+        console.log("<>: ", JSON.stringify(<>));
+      ]],
+      {
+        i(1, "describe"),
+        i(2, "var"),
+      }
+    )
+  ),
 }
