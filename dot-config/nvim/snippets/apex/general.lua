@@ -1,11 +1,12 @@
 local ls = require("luasnip")
 local s = ls.snippet
-local t = ls.text_node
 local i = ls.insert_node
 local c = ls.choice_node
 local sn = ls.snippet_node
-local d = ls.dynamic_node
 local fmta = require("luasnip.extras.fmt").fmta
+local d = ls.dynamic_node
+local t = ls.text_node
+local rep = require("luasnip.extras").rep
 
 return {
   s({
@@ -80,113 +81,19 @@ return {
   }),
   s(
     {
-      trig = "testmethod",
-      desc = "Apex Test Method",
-      docstring = "Template for Apex Test method",
+      trig = "innerclass",
+      desc = "Apex Inner Class",
       snippetType = "autosnippet",
     },
     fmta(
       [[
-        @IsTest
-        static void <>() {
+        <><> class <> {
             <>
         }
       ]],
       {
-        i(1, "methodName"),
-        i(0),
-      }
-    )
-  ),
-  s(
-    {
-      trig = "testclass",
-      desc = "Apex Test Class",
-      docstring = "Template for Apex Test class",
-      snippetType = "autosnippet",
-    },
-    fmta(
-      [[
-        @IsTest
-        private class <> {
-            @TestSetup
-            private static setup() {
-                <>
-            }
-
-            @IsTest
-            private static void testMethod() {}
-        }
-      ]],
-      {
-        i(1, "className"),
-        i(0),
-      }
-    )
-  ),
-  s(
-    {
-      trig = "testsetup",
-      desc = "Apex Test Setup",
-      docstring = "Template for Apex Test setup method",
-      snippetType = "autosnippet",
-    },
-    fmta(
-      [[
-        @TestSetup
-        static void setup() {
-            <>
-        }
-      ]],
-      {
-        i(0),
-      }
-    )
-  ),
-  s(
-    {
-      trig = "auramethod",
-      desc = "AuraEnabled Method",
-      docstring = "Template for an AuraEnabled method",
-      snippetType = "autosnippet",
-    },
-    fmta(
-      [[
-        @AuraEnabled
-        public static <> <>(<>) {
-            try {
-                <>
-            } catch (Exception e) {
-                AuraHandledException auraExc = new AuraHandledException(e.getMessage());
-                auraExc.setMessage(e.getMessage());
-                throw auraExc;
-            }
-        }
-      ]],
-      {
-        i(1, "returnType"),
-        i(2, "methodName"),
-        i(3, "params"),
-        i(0),
-      }
-    )
-  ),
-  s(
-    {
-      trig = "auraprop",
-      desc = "AuraEnabled Property",
-      docstring = "Template for an AuraEnabled property",
-      snippetType = "autosnippet",
-    },
-    fmta(
-      [[
-        <>@AuraEnabled
-        <> <> <><>
-      ]],
-      {
-        d(5, function(args)
-          vim.print(args)
-          if string.find(args[1][1], "get") or string.find(args[1][1], "set") then
+        d(3, function(args)
+          if args[1][1] == "public" then
             return sn(
               nil,
               fmta(
@@ -201,14 +108,93 @@ return {
             )
           end
           return sn(nil, {})
-        end, 4),
-        i(1, "access"),
-        i(2, "type"),
-        i(3, "name"),
-        c(4, {
-          t(";"),
-          t(" { get; set; }"),
+        end, 1),
+        c(1, {
+          t("public"),
+          t("private"),
         }),
+        i(2, "className"),
+        i(0),
+      }
+    )
+  ),
+  s(
+    {
+      trig = "customexception",
+      desc = "Custom Apex Exception",
+      snippetType = "autosnippet",
+    },
+    fmta(
+      [[
+        <><> class <>Exception extends Exception {}
+      ]],
+      {
+        d(3, function(args)
+          if args[1][1] == "public" then
+            return sn(
+              nil,
+              fmta(
+                [[
+                  /**
+                  * @description <>
+                   */
+
+                ]],
+                { i(1, "description") }
+              )
+            )
+          end
+          return sn(nil, {})
+        end, 1),
+        c(1, {
+          t("public"),
+          t("private"),
+        }),
+        i(2, "name"),
+      }
+    )
+  ),
+  s(
+    {
+      trig = "fortype",
+      desc = "For loop over an Iterable",
+      snippetType = "autosnippet",
+    },
+    fmta(
+      [[
+        for (<> <> : <>) {
+            <>
+        }
+      ]],
+      {
+        i(1, "type"),
+        i(2, "var"),
+        i(3, "iterable"),
+        i(0),
+      }
+    )
+  ),
+  s(
+    {
+      trig = "forind",
+      desc = "For loop over an index",
+      snippetType = "autosnippet",
+    },
+    fmta(
+      [[
+        for (Integer [] = 0; [] < []; []++) {
+            []
+        }
+      ]],
+      {
+        i(1, "i"),
+        rep(1),
+        i(2, "iMax"),
+        rep(1),
+        i(),
+      },
+      {
+        delimiters = "[]",
       }
     )
   ),
