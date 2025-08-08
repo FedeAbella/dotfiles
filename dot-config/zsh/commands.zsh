@@ -107,7 +107,7 @@ grb() {
 
     [[ -n "$1" ]] || { echo "Must specify branch to rebase from" >&2 && exit 1; }
 
-    git pull "${2:-remote}" "$1:$1" && git rebase "$1"
+    git pull "${2:-origin}" "$1:$1" && git rebase "$1"
 }
 
 # Switch to another branch and pull to it
