@@ -21,7 +21,7 @@ return {
         fmta(
           [[
             /**
-            * @description <>
+             * @description <>
              */
           ]],
           {
@@ -34,8 +34,8 @@ return {
         fmta(
           [[
             /**
-            * @description <>
-            * @param <> <>
+             * @description <>
+             * @param <> <>
              */
           ]],
           {
@@ -50,8 +50,8 @@ return {
         fmta(
           [[
             /**
-            * @description <>
-            * @return <>
+             * @description <>
+             * @return <>
              */
           ]],
           {
@@ -65,9 +65,9 @@ return {
         fmta(
           [[
             /**
-            * @descrption <>
-            * @param <> <>
-            * @return <>
+             * @descrption <>
+             * @param <> <>
+             * @return <>
           ]],
           {
             i(1, "Class/Method description"),
@@ -136,7 +136,7 @@ return {
               fmta(
                 [[
                   /**
-                  * @description <>
+                   * @description <>
                    */
 
                 ]],

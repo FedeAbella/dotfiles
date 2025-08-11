@@ -56,7 +56,7 @@ return {
               fmta(
                 [[
                   /**
-                  * @description <>
+                   * @description <>
                    */
 
                 ]],
