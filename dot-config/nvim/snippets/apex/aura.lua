@@ -66,13 +66,21 @@ return {
           end
           return sn(nil, {})
         end, 4),
-        i(1, "access"),
+        c(1, {
+          t("public"),
+          t("private"),
+        }),
         i(2, "type"),
         i(3, "name"),
-        c(4, {
-          t(";"),
-          t(" { get; set; }"),
-        }),
+        d(4, function(args)
+          if args[1][1] == "private" then
+            return sn(nil, { t(";") })
+          end
+          return sn(nil, { c(1, {
+            t(";"),
+            t(" { get; set; }"),
+          }) })
+        end, 1),
       }
     )
   ),
