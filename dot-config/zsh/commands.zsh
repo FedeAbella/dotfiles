@@ -53,7 +53,7 @@ gbpl() (
 # Create a local .gitignore file
 glocignore() (
     git_root=$(git rev-parse --show-toplevel 2>&1)
-    [[ -d "$git_root" ]] || { echo "Not a git repository" >&2 && exit 1; }
+    [[ -d "$git_root" ]] || { echo "Not a git repository" >&2 && return 1; }
 
     ln -sf "$git_root"/.git/info/exclude "$git_root"/.gitignore-local
     echo ".gitignore-local" >>"$git_root"/.gitignore-local
@@ -61,11 +61,11 @@ glocignore() (
 
 # Create a new git branch from another, move to it and add a description
 gnb() {
-    [[ -d "$(git rev-parse --show-toplevel 2>&1)" ]] || { echo "Not a git repository" >&2 && exit 1; }
+    [[ -d "$(git rev-parse --show-toplevel 2>&1)" ]] || { echo "Not a git repository" >&2 && return 1; }
 
     if [[ -z $1 ]] || [[ -z $2 ]]; then
         echo "Must specify to and from branches" >&2
-        exit 1
+        return 1
     fi
 
     git switch "$1" && git pull && git switch -c "$2" && git branch --edit-description
@@ -87,7 +87,7 @@ gl() {
 
 # Pretty list branches -> fzf (+ log preview)
 gb() {
-    [[ -d "$(git rev-parse --show-toplevel 2>&1)" ]] || { echo "Not a git repository" >&2 && exit 1; }
+    [[ -d "$(git rev-parse --show-toplevel 2>&1)" ]] || { echo "Not a git repository" >&2 && return 1; }
 
     gbpl |
         tail -n +2 |
@@ -105,7 +105,7 @@ gb() {
 grb() {
     [[ -d "$(git rev-parse --show-toplevel 2>&1)" ]] || { echo "Not a git repository" >&2 && return 1; }
 
-    [[ -n "$1" ]] || { echo "Must specify branch to rebase from" >&2 && exit 1; }
+    [[ -n "$1" ]] || { echo "Must specify branch to rebase from" >&2 && return 1; }
 
     git pull "${2:-origin}" "$1:$1" && git rebase "$1"
 }
@@ -114,7 +114,7 @@ grb() {
 gsp() {
     [[ -d "$(git rev-parse --show-toplevel 2>&1)" ]] || { echo "Not a git repository" >&2 && return 1; }
 
-    [[ -n "$1" ]] || { echo "Must specify branch to switch to" >&2 && exit 1; }
+    [[ -n "$1" ]] || { echo "Must specify branch to switch to" >&2 && return 1; }
 
     git switch "$1" && git pull
 }
