@@ -97,8 +97,8 @@ gb() {
             --delimiter "[[:space:]][[:space:]]+" \
             --preview 'git log --color=always --pretty="%C(red)%h%C(auto)%d%Creset %s %C(yellow)by %an %C(cyan)(%ar)%Creset" {1}' \
             --preview-window '<80(down)' \
-            --bind 'enter:execute(git switch {1})+abort' \
-            --bind 'D:execute(sed -e "s/ .*//" {+f} | xargs git branch -D)+abort'
+            --bind 'enter:become(git switch {1})' \
+            --bind 'D:become(sed -e "s/ .*//" {+f} | xargs git branch -D)'
 }
 
 # Pull another branch and rebase current branch from that one
