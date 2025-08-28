@@ -26,6 +26,10 @@ return {
           i = {
             ["<C-k>"] = actions.move_selection_previous,
             ["<C-j>"] = actions.move_selection_next,
+            ["<M-d>"] = actions.delete_buffer,
+          },
+          n = {
+            ["<M-d>"] = actions.delete_buffer,
           },
         },
         vimgrep_arguments = {
@@ -80,7 +84,6 @@ return {
       desc = "Telescope: Find files",
     },
     { keys = { "n", "<leader>ft" }, cmd = [[<cmd>Telescope live_grep<cr>]], desc = "Telescope: Find text" },
-    { keys = { "n", "<leader>fg" }, cmd = [[<cmd>Telescope git_files<cr>]], desc = "Telescope: Find git files" },
     { keys = { "n", "<leader>fh" }, cmd = [[<cmd>Telescope help_tags<cr>]], desc = "Telescope: Find in help" },
     -- Diagnostics
     {
