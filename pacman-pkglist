@@ -59,13 +59,13 @@ hyprsunset
 icaclient
 inkscape
 inotify-tools
+iotop
 java-environment-common
 java-runtime-common
 jdk21-openjdk
 jq
 jre17-openjdk
 kamoso
-kcalc
 kcharselect
 kcolorchooser
 kdegraphics-thumbnailers
@@ -100,8 +100,10 @@ nm-connection-editor
 noto-fonts-cjk
 noto-fonts-emoji
 nss-mdns
+numbat-bin
 nwg-look
 okular
+openbsd-netcat
 openrazer-daemon
 otf-font-awesome
 pacman-contrib

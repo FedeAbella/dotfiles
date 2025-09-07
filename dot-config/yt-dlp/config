@@ -1,0 +1,30 @@
+# get subtitles
+--write-subs
+
+# get english and spanish subtitles
+--sub-langs 'en.*,es'
+
+# order of preferred sub formats
+--sub-format 'ass/srt/best'
+
+# embed subs in video file
+--embed-subs
+
+# format output as mkv or mp4
+--merge-output-format "mkv/mp4"
+--remux-video "mkv/mp4"
+
+# embed video metadata
+--embed-metadata
+
+# set output format
+--output ~/Videos/yt-dlp/%(channel)s/%(playlist|)s/%(playlist_index&{}_|)s%(title)s.%(ext)s
+
+# keep filenames to ascii
+--restrict-filenames
+
+# show progress bar
+--progress
+
+# embed thumbnail in video file
+--embed-thumbnail
