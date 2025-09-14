@@ -29,7 +29,5 @@ source "$ZSH"/oh-my-zsh.sh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f "$XDG_CONFIG_HOME"/p10k/p10k.zsh ]] || source "$XDG_CONFIG_HOME"/p10k/p10k.zsh
 
-# Source the syntax highlighting plugin (THIS MUST BE THE LAST SOURCE)
-source "$XDG_CONFIG_HOME"/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
-[[ ! -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] || source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-[[ ! -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] || source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# plugins
+[[ ! -f "$XDG_CONFIG_HOME"/zsh/plugins ]] || source "$XDG_CONFIG_HOME"/zsh/plugins

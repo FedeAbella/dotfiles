@@ -1,0 +1,8 @@
+# autosuggestions
+# requires zsh-autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Source the syntax highlighting plugin (THIS MUST BE THE LAST SOURCE)
+source "$XDG_CONFIG_HOME"/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+[[ ! -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] || source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ ! -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] || source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
