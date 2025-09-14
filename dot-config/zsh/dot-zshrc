@@ -17,9 +17,9 @@ bindkey -e # Needed to be able to use Alt-C for fzf smart cd
 autoload -U colors && colors
 
 # personal configuration
-[[ ! -f "$XDG_CONFIG_HOME"/zsh/aliases.zsh ]] || source "$XDG_CONFIG_HOME"/zsh/aliases.zsh
-[[ ! -f "$XDG_CONFIG_HOME"/zsh/apps.zsh ]] || source "$XDG_CONFIG_HOME"/zsh/apps.zsh
-[[ ! -f "$XDG_CONFIG_HOME"/zsh/commands.zsh ]] || source "$XDG_CONFIG_HOME"/zsh/commands.zsh
+[[ ! -f "$XDG_CONFIG_HOME"/zsh/aliases ]] || source "$XDG_CONFIG_HOME"/zsh/aliases
+[[ ! -f "$XDG_CONFIG_HOME"/zsh/apps ]] || source "$XDG_CONFIG_HOME"/zsh/apps
+[[ ! -f "$XDG_CONFIG_HOME"/zsh/commands ]] || source "$XDG_CONFIG_HOME"/zsh/commands
 
 # powerlevel10k
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
