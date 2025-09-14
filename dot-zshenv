@@ -1,12 +1,13 @@
-# XDG envs
+# XDG base dirs
 export XDG_CONFIG_HOME="$HOME"/.config
 export XDG_DATA_HOME="$HOME"/.local/share
 export XDG_STATE_HOME="$HOME"/.local/state
 export XDG_CACHE_HOME="$HOME"/.cache
 export XDG_PICTURES_DIR="$HOME"/Pictures
 export XDG_MUSIC_DIR="$HOME"/Music
-export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
 
+# dirs that depend on XDG
+export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc:"$XDG_CONFIG_HOME"/gtk-2.0/gtkrc.mine
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export GOPATH="$XDG_CONFIG_HOME"/go
@@ -18,7 +19,6 @@ export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME"/ripgrep/ripgreprc
 export TERM=kitty
 export EDITOR=nvim
 export VISUAL=nvim
-# export LESS="-RF"
 
 export SFDX_DISABLE_DNS_CHECK=true
 export SF_USE_GENERIC_UNIX_KEYCHAIN=true
