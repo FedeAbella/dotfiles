@@ -8,8 +8,7 @@ fi
 HISTSIZE=1000
 SAVEHIST=2000
 HIST_STAMPS="yyyy-mm-dd"
-[ -d "$XDG_STATE_HOME"/zsh ] || mkdir "$XDG_STATE_HOME"/zsh
-HISTFILE="$XDG_STATE_HOME"/zsh/history
+HISTFILE="$XDG_CACHE_HOME"/zsh_history
 
 setopt autocd beep nonomatch
 unsetopt extendedglob
