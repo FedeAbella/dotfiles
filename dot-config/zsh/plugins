@@ -2,6 +2,10 @@
 # requires zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# vi mode
+# requires zsh-vi-mode
+source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
 # syntax highlighting
 # requires zsh-syntax-highlighting
 # MUST BE THE LAST SOURCE

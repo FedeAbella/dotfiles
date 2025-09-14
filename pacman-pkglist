@@ -181,3 +181,4 @@ zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k-git
+zsh-vi-mode
