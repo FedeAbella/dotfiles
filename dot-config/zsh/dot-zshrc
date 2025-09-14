@@ -10,9 +10,8 @@ SAVEHIST=2000
 HIST_STAMPS="yyyy-mm-dd"
 HISTFILE="$XDG_CACHE_HOME"/zsh_history
 
-setopt autocd beep nonomatch
-unsetopt extendedglob
-bindkey -e
+setopt autocd
+unsetopt nomatch
 
 export ZSH="$XDG_CONFIG_HOME"/oh-my-zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
