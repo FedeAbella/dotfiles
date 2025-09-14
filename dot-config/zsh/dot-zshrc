@@ -14,7 +14,7 @@ setopt autocd
 unsetopt nomatch
 bindkey -e # Needed to be able to use Alt-C for fzf smart cd
 
-export ZSH="$XDG_CONFIG_HOME"/oh-my-zsh
+autoload -U colors && colors
 ZSH_THEME="powerlevel10k/powerlevel10k"
 zstyle ':omz:update' mode auto      # update automatically without asking
 plugins=(zsh-autosuggestions zsh-vi-mode colored-man-pages command-not-found)
