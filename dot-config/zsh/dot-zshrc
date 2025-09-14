@@ -12,6 +12,7 @@ HISTFILE="$XDG_CACHE_HOME"/zsh_history
 
 setopt autocd
 unsetopt nomatch
+bindkey -e # Needed to be able to use Alt-C for fzf smart cd
 
 export ZSH="$XDG_CONFIG_HOME"/oh-my-zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
