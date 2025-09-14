@@ -25,7 +25,8 @@ source "$ZSH"/oh-my-zsh.sh
 [[ ! -f "$XDG_CONFIG_HOME"/zsh/apps.zsh ]] || source "$XDG_CONFIG_HOME"/zsh/apps.zsh
 [[ ! -f "$XDG_CONFIG_HOME"/zsh/commands.zsh ]] || source "$XDG_CONFIG_HOME"/zsh/commands.zsh
 
-# p10k config
+# powerlevel10k
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f "$XDG_CONFIG_HOME"/p10k/p10k.zsh ]] || source "$XDG_CONFIG_HOME"/p10k/p10k.zsh
 
 # Source the syntax highlighting plugin (THIS MUST BE THE LAST SOURCE)
