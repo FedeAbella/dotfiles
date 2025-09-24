@@ -41,7 +41,7 @@ go
 gptfdisk
 grub
 grub-btrfs
-gsettings-qt
+gsettings-qt5
 gtk4-layer-shell
 gwenview
 hdparm
