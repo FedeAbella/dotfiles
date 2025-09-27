@@ -33,7 +33,7 @@
 #custom-sunset,
 #custom-drives,
 #custom-dotfiles {
-  margin: 13px 0px;
+  margin: 10px 0px;
   border-radius: 1rem;
   padding: 0rem 1rem;
   background-color: @base;
@@ -148,6 +148,7 @@ window#waybar.empty #window {
 #custom-drives {
   color: @peach;
   border-color: @peach;
+  margin-left: 0.5rem;
 }
 
 #pulseaudio {
