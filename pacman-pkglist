@@ -6,6 +6,8 @@ bat
 bind
 bluedevil
 bluez-utils
+brother-dcp-t230
+brscan5
 btop
 btrfs-progs
 catppuccin-cursors-mocha
@@ -17,6 +19,7 @@ cpio
 cronie
 cups
 cups-pdf
+devtools
 discord
 docker
 docker-buildx
@@ -24,6 +27,7 @@ docker-compose
 dolphin
 dolphin-plugins
 efibootmgr
+elecwhat-bin
 fastfetch
 firefox
 flameshot
@@ -140,8 +144,10 @@ rofi
 rose-pine-cursor
 rose-pine-hyprcursor
 rsync
+sane
 satty
 sddm
+simple-scan
 smartmontools
 snap-pac
 snapper
