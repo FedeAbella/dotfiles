@@ -11,7 +11,8 @@ HIST_STAMPS="yyyy-mm-dd"
 HISTFILE="$XDG_CACHE_HOME"/zsh_history
 
 setopt autocd
-unsetopt nomatch
+setopt extended_glob
+setopt glob_dots
 bindkey -e # Needed to be able to use Alt-C for fzf smart cd
 
 autoload -U colors && colors
