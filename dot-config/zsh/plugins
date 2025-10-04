@@ -6,10 +6,6 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # requires zsh-vi-mode
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
-# colored man pages
-# github.com/ohmyzsh
-source "$XDG_CONFIG_HOME"/zsh/colored-man-pages.plugin.zsh
-
 # syntax highlighting
 # requires zsh-syntax-highlighting
 # MUST BE THE LAST SOURCE

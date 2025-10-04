@@ -3,6 +3,7 @@ ark
 base
 base-devel
 bat
+bat-extras
 bind
 bluedevil
 bluez-utils

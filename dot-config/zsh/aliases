@@ -35,3 +35,7 @@ alias gadd='git add .'
 alias gc='git commit'
 alias gca='git commit --amend'
 alias gsu='git status -u'
+
+# bat
+alias lsbc='lsblk | bat -pl conf'
+alias freee='free -m | bat -pl meminfo'
