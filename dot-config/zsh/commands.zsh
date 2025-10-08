@@ -69,7 +69,11 @@ gnb() {
         return 1
     fi
 
-    git switch "$1" && git pull && git switch -c "$2" && git branch --edit-description
+    if [[ "$(git rev-parse --abbrev-ref HEAD)" != "$1" ]]; then
+        git switch "$1"
+    fi
+
+    git pull && git switch -c "$2" && git branch --edit-description
 }
 
 # git pretty log
