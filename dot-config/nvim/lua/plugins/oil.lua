@@ -12,6 +12,9 @@ return {
     delete_to_trash = true,
     constrain_cursor = "name",
     watch_for_changes = true,
+    float = {
+      border = "rounded",
+    },
   },
   commander = {
     {
