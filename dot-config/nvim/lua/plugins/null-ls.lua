@@ -84,7 +84,7 @@ return {
           null_ls.builtins.formatting.goimports_reviser,
           null_ls.builtins.formatting.isort,
           null_ls.builtins.formatting.prettier.with({
-            timeout = 10000,
+            timeout = -1,
             extra_filetypes = { "apex" },
           }),
           null_ls.builtins.formatting.shfmt.with({
