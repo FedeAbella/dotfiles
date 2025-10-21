@@ -1,4 +1,4 @@
 vim.o.textwidth = 80
 vim.o.wrap = true
-vim.o.softtabstop = 4
-vim.o.shiftwidth = 4
+vim.o.softtabstop = 2
+vim.o.shiftwidth = 2
