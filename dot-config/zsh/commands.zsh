@@ -121,6 +121,13 @@ grb() {
     git pull "${2:-origin}" "$1:$1" && git rebase "$1"
 }
 
+# Push current branch and set upstream to origin or remote passed as arg
+gP() {
+    [[ -d "$(git rev-parse --show-toplevel 2>&1)" ]] || { echo "Not a git repository" >&2 && return 1; }
+
+    git push --set-upstream "${1:-origin}" HEAD
+}
+
 # Switch to another branch and pull to it
 gsp() {
     [[ -d "$(git rev-parse --show-toplevel 2>&1)" ]] || { echo "Not a git repository" >&2 && return 1; }
