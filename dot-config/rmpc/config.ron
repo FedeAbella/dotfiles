@@ -2,6 +2,10 @@
 #![enable(unwrap_newtypes)]
 #![enable(unwrap_variant_newtypes)]
 (
+    artists: (
+        album_display_mode: SplitByDate,
+        album_date_tags: [OriginalDate, Date],
+    ),
     theme: "theme",
     select_current_song_on_change: true,
     keybinds: (
