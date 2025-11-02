@@ -22,6 +22,8 @@ cups
 cups-pdf
 devtools
 discord
+docbook-xml
+docbook-xsl
 docker
 docker-buildx
 docker-compose
@@ -42,12 +44,16 @@ gimp
 git
 git-delta
 github-cli
+glib2-docs
+glmark2
 gnome-settings-daemon
 go
+gperf
 gptfdisk
 grub
 grub-btrfs
 gsettings-qt5
+gtk-doc
 gtk4-layer-shell
 gwenview
 hdparm
@@ -96,7 +102,9 @@ lxqt-config
 man-db
 mangohud
 mediainfo
+memtest86+-efi
 mpd
+nasm
 ncdu
 neovim
 network-manager-applet
@@ -132,6 +140,7 @@ postgresql
 proton-pass-bin
 proton-vpn-gtk-app
 pyenv
+python-pygments
 qt5-tools
 qt5-wayland
 qt5ct
@@ -146,6 +155,7 @@ rofi
 rose-pine-cursor
 rose-pine-hyprcursor
 rsync
+s-tui
 sane
 satty
 sddm
