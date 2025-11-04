@@ -34,6 +34,7 @@ return {
       "FlexiPage",
       "FlowDefinition",
       "Flow",
+      "Group",
       "Layout",
       "LightningComponentBundle",
       "LightningMessageChannel",
