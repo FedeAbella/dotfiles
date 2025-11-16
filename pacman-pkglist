@@ -22,8 +22,6 @@ cups
 cups-pdf
 devtools
 discord
-docbook-xml
-docbook-xsl
 docker
 docker-buildx
 docker-compose
@@ -36,6 +34,7 @@ fastfetch
 firefox
 flameshot
 flatpak
+furmark
 fuse2
 fzf
 gamemode
@@ -44,16 +43,13 @@ gimp
 git
 git-delta
 github-cli
-glib2-docs
 glmark2
 gnome-settings-daemon
 go
-gperf
 gptfdisk
 grub
 grub-btrfs
 gsettings-qt5
-gtk-doc
 gtk4-layer-shell
 gwenview
 hdparm
@@ -104,7 +100,7 @@ mangohud
 mediainfo
 memtest86+-efi
 mpd
-nasm
+mprime
 ncdu
 neovim
 network-manager-applet
@@ -140,7 +136,6 @@ postgresql
 proton-pass-bin
 proton-vpn-gtk-app
 pyenv
-python-pygments
 qt5-tools
 qt5-wayland
 qt5ct
