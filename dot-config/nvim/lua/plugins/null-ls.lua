@@ -96,7 +96,6 @@ return {
             },
           }),
           null_ls.builtins.formatting.stylua,
-          null_ls.builtins.formatting.xmllint.with({ timeout = 100000 }),
 
           -- Hovers
           null_ls.builtins.hover.dictionary,
