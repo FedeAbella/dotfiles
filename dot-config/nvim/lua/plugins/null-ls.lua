@@ -14,7 +14,7 @@ return {
 
       return {
         border = "rounded",
-        default_timeout = -1,
+        default_timeout = 100000,
         on_attach = function(client, bufnr)
           if client.supports_method("textDocument/formatting") then
             vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
@@ -28,6 +28,7 @@ return {
                     return c.name == "null-ls"
                   end,
                   async = false,
+                  timeout_ms = 100000,
                 })
               end,
             })
@@ -69,7 +70,7 @@ return {
                 "--no-progress",
               }
             end,
-            timeout = 10000,
+            timeout = 100000,
           }),
           null_ls.builtins.diagnostics.trail_space, -- Trailing whitespace for all filetypes
 
@@ -84,7 +85,7 @@ return {
           null_ls.builtins.formatting.goimports_reviser,
           null_ls.builtins.formatting.isort,
           null_ls.builtins.formatting.prettier.with({
-            timeout = -1,
+            timeout = 100000,
             extra_filetypes = { "apex" },
           }),
           null_ls.builtins.formatting.shfmt.with({
@@ -95,6 +96,7 @@ return {
             },
           }),
           null_ls.builtins.formatting.stylua,
+          null_ls.builtins.formatting.xmllint.with({ timeout = 100000 }),
 
           -- Hovers
           null_ls.builtins.hover.dictionary,
