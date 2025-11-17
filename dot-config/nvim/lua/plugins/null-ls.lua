@@ -86,7 +86,7 @@ return {
           null_ls.builtins.formatting.isort,
           null_ls.builtins.formatting.prettier.with({
             timeout = 100000,
-            extra_filetypes = { "apex" },
+            extra_filetypes = { "apex", "xml" },
           }),
           null_ls.builtins.formatting.shfmt.with({
             extra_args = {
